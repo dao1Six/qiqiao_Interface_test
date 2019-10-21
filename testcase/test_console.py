@@ -1,0 +1,135 @@
+import json
+import unittest
+import sys
+from collections import OrderedDict
+
+import params as params
+import requests
+
+from requests_toolbelt.multipart.encoder import MultipartEncoder
+from pubilc import function
+import os
+import time
+
+
+
+
+class ConsoleTestSuit(unittest.TestCase):
+    '''七巧开发平台测试类'''
+
+
+
+    def setUp(self):
+        #添加请求头，模拟浏览器访问
+        self.headers = {"Accept": "application/json, text/plain, */*",
+                   "Cookie": "corpAB=ww6b6c5c4fa6f34b16; _lastReqID=d66bcee5d1f64ce0bde68cfeadd715a1",
+                   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36",
+                   "X-Auth0-Token": "1430343df6493be7800d578600952ff4"}
+
+    def test_query_application_01(self):
+        '''用户搜索查找已存在应用'''
+        name = "OKR"
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications?delete=false&name="+name+"&applicationGroupId=&page=1"
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json()
+        self.assertEqual(responseJson['data']['totalCount'],1)
+        self.assertEqual(responseJson['data']['list'][0]['name'],name)
+
+    def test_appstore(self):
+        '''用户进入应用市场页面'''
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/appstore/app_stores?name="
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json()
+        self.assertEqual(responseJson['code'],0)
+        self.assertGreater(len(responseJson['data']['list']),2)
+
+    def test_appstoreoOerview(self):
+        '''用户应用市场查看应用详情'''
+        applicationId = "93aad8fe99174ed7bf8a76060ea87ccb"
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/appstore/app_stores/"+applicationId  #OKR应用
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json()
+        self.assertEqual(responseJson['code'],0)
+        self.assertEqual(responseJson['data']['applicationName'],'OKR管理')
+        self.assertIn( 'OKR是一套明确和跟踪目标及其完成情况的管理工具和方法',responseJson['data']['overview'])
+        self.assertEqual(responseJson['data']['status'],"ONLINE")
+
+    def test_locales_en_US(self):
+        '''用户在选择语言处切换使用英文'''
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1//workbench/i18n/locales/en_US"
+        response = requests.put (url=url, headers=self.headers)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['country'], 'US')
+        self.assertEqual (responseJson['data']['displayName'], 'English (United States)')
+
+    def test_locales_zh_TW(self):
+        '''用户在选择语言处切换使用英文'''
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1//workbench/i18n/locales/zh_TW"
+        response = requests.put (url=url, headers=self.headers)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['country'], 'TW')
+        self.assertEqual (responseJson['data']['displayName'], 'Chinese (Taiwan)')
+
+    def test_loginQiqiao(self):
+        '''用户退出当前账号'''
+        url = 'https://qy.do1.com.cn/qwy/sso/loginQiqiao'
+        response = requests.put (url=url, headers=self.headers)
+        self.assertEqual (response.status_code, 200)
+
+
+    def test_create_application(self):
+        '''用户创建应用'''
+
+        headers = {"Accept": "application/json, text/plain, */*",
+                   "Cookie": "corpAB=ww6b6c5c4fa6f34b16; _lastReqID=d66bcee5d1f64ce0bde68cfeadd715a1",
+                   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36",
+                   "X-Auth0-Token": "1430343df6493be7800d578600952ff4",
+                   "Content-Type":"application/json"}
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"
+
+        data = {"createUserId":"05f35264ba3441c4be607c25f75cb492","applicationGroupId":"","logo":"icon-zhenggaileixing","mainColor":"#96DECC","name":"接口测试","status":[],
+             "terminalType":["PC_WEB","WX_MINI_PROGRAM","MOBILE_WECHAT"],"delete":False}
+
+        response = requests.post(url=url,headers = headers,data=data)
+        responseJson = response.json()
+        print(responseJson)
+        self.assertEqual(responseJson['code'],0)
+
+
+    def test_importApplication(self):
+        '''用户导入应用'''
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/import"
+
+        file = "D:\\Downloads\\昂星demo.zip"
+
+        a = open(file,'rb')
+        m = MultipartEncoder(
+            fields={
+                'applicationGroupId':'',
+                'importType':'ADD',
+            'file':('昂星demo.zip',a,'application/x-zip-compressed')
+            }
+        )
+
+        header = {"Content-Type":m.content_type,
+                  "Cookie": "corpAB=ww6b6c5c4fa6f34b16; Hm_lvt_aed59972e7075b4acd495cf5b000c257=1568119947; _lastReqID=81cfe8ae522a42bdbcc961a35ec90bba; tgw_l7_route=2757773c8c583b0e1941ae61de7a309d",
+                  "X-Auth0-Token": "99e741e5aecca5799cbe7b380a59351e"}
+        response = requests.post(headers = header,url =url,data=m)
+
+        print(response.text)
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    unittest.main()
