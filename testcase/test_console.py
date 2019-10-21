@@ -24,7 +24,8 @@ class ConsoleTestSuit(unittest.TestCase):
         self.headers = {"Accept": "application/json, text/plain, */*",
                    "Cookie": "corpAB=ww6b6c5c4fa6f34b16; _lastReqID=d66bcee5d1f64ce0bde68cfeadd715a1",
                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36",
-                   "X-Auth0-Token": "1430343df6493be7800d578600952ff4"}
+                   "X-Auth0-Token": "1430343df6493be7800d578600952ff4",
+                        "Content-Type": "application/json"}
 
     def test_query_application_01(self):
         '''用户搜索查找已存在应用'''
@@ -90,20 +91,26 @@ class ConsoleTestSuit(unittest.TestCase):
 
         url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"
 
-        data = {"createUserId":"05f35264ba3441c4be607c25f75cb492","applicationGroupId":"","logo":"icon-zhenggaileixing","mainColor":"#96DECC","name":"接口测试","status":[],
+        data = {"createUserId":"05f35264ba3441c4be607c25f75cb492","applicationGroupId":"","logo":"icon-zhenggaileixing","mainColor":"#96DECC","name":"创建应用接口测试","status":[],
              "terminalType":["PC_WEB","WX_MINI_PROGRAM","MOBILE_WECHAT"],"delete":False}
 
-        response = requests.post(url=url,headers = headers,data=data)
+        data_json = json.dumps (data)
+
+        response = requests.post(url=url,headers = headers,data=data_json)
         responseJson = response.json()
         print(responseJson)
         self.assertEqual(responseJson['code'],0)
+        self.assertEqual (responseJson['data']['name'], "创建应用接口测试")
+
+        #删除应用
+
 
 
     def test_importApplication(self):
-        '''用户导入应用3'''
+        '''用户导入应用'''
         url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/import"
 
-        file = "D:\\Downloads\\昂星demo.zip"
+        file = '..\\file_data\\昂星demo.zip'
 
         a = open(file,'rb')
         m = MultipartEncoder(
@@ -113,13 +120,68 @@ class ConsoleTestSuit(unittest.TestCase):
             'file':('昂星demo.zip',a,'application/x-zip-compressed')
             }
         )
-
         header = {"Content-Type":m.content_type,
                   "Cookie": "corpAB=ww6b6c5c4fa6f34b16; Hm_lvt_aed59972e7075b4acd495cf5b000c257=1568119947; _lastReqID=81cfe8ae522a42bdbcc961a35ec90bba; tgw_l7_route=2757773c8c583b0e1941ae61de7a309d",
                   "X-Auth0-Token": "99e741e5aecca5799cbe7b380a59351e"}
         response = requests.post(headers = header,url =url,data=m)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'],"昂星demo")
 
-        print(response.text)
+    def test_create_groups(self):
+        '''用户添加分组'''
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/groups"
+
+        data = {"name":"A","createUserId":None}
+        data_json = json.dumps(data)
+
+        response = requests.post (url=url, headers=self.headers, data=data_json)
+        responseJson = response.json ()
+
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'], "A")
+
+
+    def test_applications_groups(self):
+        '''用户切换应用分组'''
+        applicationGroupId = "5dad537cd662f60001460fa6"
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications?delete=false&name=&applicationGroupId="+applicationGroupId+"&page=1"
+
+        data = {"name":"A","createUserId":None}
+        data_json = json.dumps(data)
+
+        response = requests.get(url=url, headers=self.headers)
+        responseJson = response.json ()
+
+        self.assertEqual (responseJson['code'], 0)
+        self.assertGreater(len(responseJson['data']['list']),1)
+
+
+    def test_applications_release(self):
+        '''用户发布应用'''
+
+        applicationId = "5dad5206d662f60001460fa4"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/release"
+        data = {"status":["DEFAULT","DEFAULT","DEFAULT"]}  #下架
+        datajson = json.dumps(data)
+
+        data2 = {"status":["PC_WEB","MOBILE_WECHAT","WX_MINI_PROGRAM"]}  #上架
+        datajson2 = json.dumps (data2)
+
+        response = requests.post (url=url, headers=self.headers, data=datajson)  #先下架
+
+        response2 = requests.post (url=url, headers=self.headers, data=datajson2)  # 再上架
+        responseJson2 = response2.json ()
+
+
+        self.assertEqual (responseJson2['code'], 0)
+        self.assertEqual(responseJson2['data']['status'],["PC_WEB", "MOBILE_WECHAT", "WX_MINI_PROGRAM"])
+
+
+
+
 
 
 
