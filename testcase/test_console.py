@@ -100,7 +100,7 @@ class ConsoleTestSuit(unittest.TestCase):
 
 
     def test_importApplication(self):
-        '''用户导入应用'''
+        '''用户导入应用3'''
         url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/import"
 
         file = "D:\\Downloads\\昂星demo.zip"
