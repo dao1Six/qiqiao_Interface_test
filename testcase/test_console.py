@@ -2,6 +2,7 @@ import json
 import unittest
 import sys
 from collections import OrderedDict
+from urllib import parse
 
 import params as params
 import requests
@@ -103,6 +104,11 @@ class ConsoleTestSuit(unittest.TestCase):
         self.assertEqual (responseJson['data']['name'], "创建应用接口测试")
 
         #删除应用
+        applicationId = responseJson['data']['id']
+        applicationName = parse.quote(responseJson['data']['name'])
+        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"?applicationName="+applicationName
+        delresponse = requests.delete(delUrl,headers = headers)
+        self.assertEqual (responseJson['code'], 0)
 
 
 
@@ -178,6 +184,88 @@ class ConsoleTestSuit(unittest.TestCase):
 
         self.assertEqual (responseJson2['code'], 0)
         self.assertEqual(responseJson2['data']['status'],["PC_WEB", "MOBILE_WECHAT", "WX_MINI_PROGRAM"])
+
+
+    def test_creat_roles(self):
+        '''用户为应用添加角色'''
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/roles"
+
+        data = {"name":"A","applicationId":"a6aece61fa4248fc9a9d4721cb0775f7","defaultRole":False,"orderNo":1}
+
+        dataJson = json.dumps(data)
+
+        response = requests.post(url,data=dataJson,headers =self.headers)
+
+        responseJson = response.json ()
+        self.assertEqual(responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'], "A")
+
+        #删除角色
+
+        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/roles/"+responseJson['data']['id']
+        delresponse = requests.delete(delUrl,headers =self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
+
+
+    def test_form_models(self):
+        '''用户进入表单设计页面'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/form_models/list?applicationId="+applicationId+"&formGroupId="
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertGreater (len(responseJson['data']), 2)
+
+    def test_add_forms_groups(self):
+        '''用户创建表单分组'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+        name = "aaa"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/forms/groups"
+        data = json.dumps({"applicationId":applicationId,"name":name})
+        response = requests.post(url=url,headers = self.headers,data=data)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'], name)
+
+        #删除分组
+        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/forms/groups/"+responseJson['data']['id']
+        delresponse = requests.delete(delUrl,headers =self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
+
+    def test_creat_form_models(self):
+        '''用户创建表单'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+        name = "aaa"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/form_models"
+        data = json.dumps({"name":name,"formTableId":"form_","formGroupId":"","erType":"1","applicationId":applicationId})
+        response = requests.post(url=url,headers = self.headers,data=data)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'], name)
+
+        #删除表单
+        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/form_models/"+responseJson['data']['id']+"?formName="+name
+        delresponse = requests.delete(delUrl,headers =self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
+
+
+
+
+
+
+
+
+
 
 
 
