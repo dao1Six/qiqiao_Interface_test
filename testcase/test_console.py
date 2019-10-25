@@ -300,7 +300,7 @@ class ConsoleTestSuit(unittest.TestCase):
         delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/processData/"+responseJson['data']['id']
         delresponse = requests.delete(delUrl,headers =self.headers)
         delresponseJson = delresponse.json ()
-        self.assertEqual (delresponseJson['code'], 0)
+        self.assertEqual (delresponseJson['code'], 0)#
 
 
 
