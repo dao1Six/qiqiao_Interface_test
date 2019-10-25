@@ -256,7 +256,57 @@ class ConsoleTestSuit(unittest.TestCase):
         delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/form_models/"+responseJson['data']['id']+"?formName="+name
         delresponse = requests.delete(delUrl,headers =self.headers)
         delresponseJson = delresponse.json ()
-        self.assertEqual (delresponseJson['code'], 0)##
+        self.assertEqual (delresponseJson['code'], 0)
+
+
+    def test_switch_form(self):
+        '''用户切换表单页面'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+        formId = "b567fef0a75f49fc8e345943f2ed3c09"
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/forms/"+formId
+
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['data']['formModelId'], 'b567fef0a75f49fc8e345943f2ed3c09')
+        self.assertGreater (len(responseJson['data']['formFields']), 0)
+
+
+    def test_process_models(self):
+        '''用户进入流程设计页面'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/process_models"
+
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['data'][0]['name'], '销售退货流程')
+
+    def test_creat_process_models(self):
+        '''用户在流程设计中新建流程'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+        name = "接口新建流程"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/process_models"
+        data = json.dumps({"name":name,"icon":"icon-renwu"})
+        response = requests.post(url=url,headers = self.headers,data=data)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'], name)
+
+        #删除流程
+        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/processData/"+responseJson['data']['id']
+        delresponse = requests.delete(delUrl,headers =self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
+
+
+
+
+
+
 
 
 

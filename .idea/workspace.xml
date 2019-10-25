@@ -23,9 +23,11 @@
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_create_application.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_create_application Coverage Results" MODIFIED="1571711657238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_create_application.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_create_application Coverage Results" MODIFIED="1571365079538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_add_forms_groups.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_add_forms_groups Coverage Results" MODIFIED="1571724559607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_console_ConsoleTestSuit_test_creat_process_models.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_creat_process_models Coverage Results" MODIFIED="1571899818897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/Interface$Unittests_for_test_website_LoginTest_test_forum_website_login.coverage" NAME="Unittests for test_website.LoginTest.test_forum_website_login Coverage Results" MODIFIED="1520909216747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_creat_roles.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_creat_roles Coverage Results" MODIFIED="1571715245969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$runAll.coverage" NAME="runAll Coverage Results" MODIFIED="1571112064931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_console_ConsoleTestSuit_test_process_models.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_process_models Coverage Results" MODIFIED="1571899326999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_form_models.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_form_models Coverage Results" MODIFIED="1571723968569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/Interface$Unittests_for_test_website_LoginTest_test_experience_website_login.coverage" NAME="Unittests for test_website.LoginTest.test_experience_website_login Coverage Results" MODIFIED="1520909225427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/Interface$function.coverage" NAME="function Coverage Results" MODIFIED="1520910679756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pubilc" />
@@ -38,6 +40,7 @@
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_create_groups.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_create_groups Coverage Results" MODIFIED="1571640041113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_ Coverage Results" MODIFIED="1571293188681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_applications_groups.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_applications_groups Coverage Results" MODIFIED="1571643297266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_console_ConsoleTestSuit_test_switch_form.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_switch_form Coverage Results" MODIFIED="1571897886017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_loginQiqiao.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_loginQiqiao Coverage Results" MODIFIED="1571294109064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
   </component>
   <component name="FileEditorManager">
@@ -57,8 +60,8 @@
       <file leaf-file-name="test_console.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testcase/test_console.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+            <state relative-caret-position="258">
+              <caret line="298" column="13" selection-start-line="298" selection-start-column="13" selection-end-line="298" selection-end-column="13" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -69,7 +72,7 @@
       <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Software/python/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="11419">
               <caret line="614" selection-start-line="614" selection-end-line="614" />
             </state>
           </provider>
@@ -88,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/runAll.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -133,6 +136,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--follow-tags" />
@@ -164,8 +172,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="235" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="503" />
+    <option name="y" value="93" />
     <option name="width" value="1577" />
     <option name="height" value="1006" />
   </component>
@@ -182,8 +191,18 @@
         <subPane>
           <expand>
             <path>
-              <item name="qiqiao_Interface_test2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiqiao_Interface_test2" type="462c0819:PsiDirectoryNode" />
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="test_report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="testcase" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -218,7 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_form_models">
+  <component name="RunManager" selected="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_process_models">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,7 +397,7 @@
       <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_creat_form_models&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_console.ConsoleTestSuit.test_creat_roles" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_console.ConsoleTestSuit.test_creat_process_models" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -389,10 +408,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_creat_roles&quot;" />
+      <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_creat_process_models&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_console.ConsoleTestSuit.test_create_application" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_console.ConsoleTestSuit.test_process_models" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -403,10 +422,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_create_application&quot;" />
+      <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_process_models&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_console.ConsoleTestSuit.test_form_models" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_console.ConsoleTestSuit.test_switch_form" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -417,7 +436,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_form_models&quot;" />
+      <option name="_new_target" value="&quot;test_console.ConsoleTestSuit.test_switch_form&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -435,19 +454,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_create_application" />
-      <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_roles" />
-      <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_form_models" />
       <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_add_forms_groups" />
       <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_form_models" />
+      <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_switch_form" />
+      <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_process_models" />
+      <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_process_models" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_process_models" />
+        <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_process_models" />
+        <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_switch_form" />
         <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_form_models" />
         <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_add_forms_groups" />
-        <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_form_models" />
-        <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_creat_roles" />
-        <item itemvalue="Python tests.Unittests for test_console.ConsoleTestSuit.test_create_application" />
       </list>
     </recent_temporary>
   </component>
@@ -539,22 +558,17 @@
       <option name="project" value="LOCAL" />
       <updated>1571669419465</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="新增文件">
+      <created>1571739360740</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571739360740</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_create_application - 2019.10.22 at 10h 32m 56s.xml">
-      <configuration name="Unittests for test_console.ConsoleTestSuit.test_create_application" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_create_application - 2019.10.22 at 10h 34m 00s.xml">
-      <configuration name="Unittests for test_console.ConsoleTestSuit.test_create_application" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_create_application - 2019.10.22 at 10h 34m 19s.xml">
-      <configuration name="Unittests for test_console.ConsoleTestSuit.test_create_application" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_creat_roles - 2019.10.22 at 11h 28m 24s.xml">
-      <configuration name="Unittests for test_console.ConsoleTestSuit.test_creat_roles" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_creat_roles - 2019.10.22 at 11h 34m 07s.xml">
       <configuration name="Unittests for test_console.ConsoleTestSuit.test_creat_roles" configurationId="tests" />
     </history-entry>
@@ -573,19 +587,30 @@
     <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_creat_form_models - 2019.10.22 at 14h 17m 41s.xml">
       <configuration name="Unittests for test_console.ConsoleTestSuit.test_creat_form_models" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_switch_form - 2019.10.24 at 14h 18m 07s.xml">
+      <configuration name="Unittests for test_console.ConsoleTestSuit.test_switch_form" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_process_models - 2019.10.24 at 14h 41m 54s.xml">
+      <configuration name="Unittests for test_console.ConsoleTestSuit.test_process_models" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_process_models - 2019.10.24 at 14h 42m 07s.xml">
+      <configuration name="Unittests for test_console.ConsoleTestSuit.test_process_models" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_console_ConsoleTestSuit_test_creat_process_models - 2019.10.24 at 14h 50m 19s.xml">
+      <configuration name="Unittests for test_console.ConsoleTestSuit.test_creat_process_models" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="228" y="93" width="1577" height="1006" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5003296" side_tool="true" weight="0.3768614" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49967042" weight="0.31844217" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49967042" visible="true" weight="0.47537228" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49967042" visible="true" weight="0.47128928" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32934928" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2676335" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="SciView" order="4" />
@@ -594,12 +619,12 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40778923" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936507" />
       <window_info anchor="right" id="Data View" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936507" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
   </component>
@@ -644,13 +669,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testcase/test_console.py</url>
-          <line>232</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="24" />
     </breakpoint-manager>
   </component>
@@ -709,6 +727,128 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pubilc/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/test_console.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4940">
+          <caret line="272" lean-forward="true" selection-start-line="272" selection-end-line="272" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11419">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_report/test_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/HTMLTestRunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#3215#3230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#15#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubilc/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11419">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#15#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_report/test_report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/HTMLTestRunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#3215#3230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/test_console.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4712">
+          <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pubilc/function.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -878,37 +1018,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/对对对.txt" />
+    <entry file="file://D:/Software/python/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11419">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/runAll.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
             <element signature="e#15#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dd/dd.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/对对对.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Software/python/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcase/test_console.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+        <state relative-caret-position="258">
+          <caret line="298" column="13" selection-start-line="298" selection-start-column="13" selection-end-line="298" selection-end-column="13" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
