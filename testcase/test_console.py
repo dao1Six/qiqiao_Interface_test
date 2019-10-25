@@ -8,6 +8,9 @@ import params as params
 import requests
 
 from requests_toolbelt.multipart.encoder import MultipartEncoder
+from sqlalchemy import null
+from sqlalchemy.sql.elements import Null
+
 from pubilc import function
 import os
 import time
@@ -300,7 +303,41 @@ class ConsoleTestSuit(unittest.TestCase):
         delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/processData/"+responseJson['data']['id']
         delresponse = requests.delete(delUrl,headers =self.headers)
         delresponseJson = delresponse.json ()
-        self.assertEqual (delresponseJson['code'], 0)#
+        self.assertEqual (delresponseJson['code'], 0)
+
+
+    def test_PCdevice(self):
+        '''用户进入PC业务建模页面'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/menus/tree?device=PC"
+
+        response = requests.get(url=url,headers = self.headers)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['data'][0]['name'], '退换货信息')
+        self.assertGreater(len(responseJson['data']),1)
+
+
+
+    def test_creat_pc_menus(self):
+        '''用户创建PC业务建模页面'''
+
+        applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"
+        name = "接口新建PC业务建模页面"
+
+        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/menus"
+        data = json.dumps({"orderBy":0,"name":name,"parentId":Null,"applicationId":applicationId,"action":"PAGE","device":"PC"})
+        response = requests.post(url=url,headers = self.headers,data=data)
+        responseJson = response.json ()
+        self.assertEqual (responseJson['code'], 0)
+        self.assertEqual (responseJson['data']['name'], name)
+
+        #删除页面
+        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"+applicationId+"/menus/"+responseJson['data']['id']
+        delresponse = requests.delete(delUrl,headers =self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
 
 
 
