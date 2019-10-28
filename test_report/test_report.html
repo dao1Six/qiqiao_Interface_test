@@ -7105,24 +7105,250 @@ body.skin-3 {
 <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     var resultData = {
-    "testPass": 1,
+    "testPass": 22,
     "testResult": [
         {
-            "className": "LoginTest",
-            "methodName": "test_official_website_login",
-            "description": "官网登陆测试",
-            "spendTime": "0.193 s",
+            "className": "ConsoleTestSuit",
+            "methodName": "test_PCdevice",
+            "description": "用户进入PC业务建模页面",
+            "spendTime": "0.229 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_add_forms_groups",
+            "description": "用户创建表单分组",
+            "spendTime": "0.542 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_applications_groups",
+            "description": "用户切换应用分组",
+            "spendTime": "0.393 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_applications_release",
+            "description": "用户发布应用",
+            "spendTime": "0.668 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_appstore",
+            "description": "用户进入应用市场页面",
+            "spendTime": "0.439 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_appstoreoOerview",
+            "description": "用户应用市场查看应用详情",
+            "spendTime": "0.393 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_creat_form_models",
+            "description": "用户创建表单",
+            "spendTime": "0.671 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_creat_pc_menus",
+            "description": "用户创建PC业务建模页面",
+            "spendTime": "0.619 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_creat_process_models",
+            "description": "用户在流程设计中新建流程",
+            "spendTime": "0.511 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_creat_roles",
+            "description": "用户为应用添加角色",
+            "spendTime": "0.422 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_create_application",
+            "description": "用户创建应用",
+            "spendTime": "1.15 s",
+            "status": "成功",
+            "log": [
+                "{'msg': '执行成功', 'code': 0, 'data': {'agentId': '', 'applicationGroupId': '', 'createTime': 1572253109510, 'createUserId': '05f35264ba3441c4be607c25f75cb492', 'delete': False, 'id': '5db6adb5495a1c00019f3dd1', 'logo': 'icon-zhenggaileixing', 'mainColor': '#96DECC', 'name': '创建应用接口测试', 'orderBy': 31, 'secret': '', 'status': ['DEFAULT'], 'tenantId': '2ade557c80d0430d9eee7589b30e4447', 'terminalType': ['PC_WEB', 'WX_MINI_PROGRAM', 'MOBILE_WECHAT'], 'updateTime': 1572253109510}}",
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_create_groups",
+            "description": "用户添加分组",
+            "spendTime": "0.198 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_device_1___PC____退换货信息___1___PC端业务建模__",
+            "description": "上海-悠悠：PC端业务建模",
+            "spendTime": "0.206 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_device_2___MOBILE____应用首页___0___移动端业务建模__",
+            "description": "上海-悠悠：移动端业务建模",
+            "spendTime": "0.215 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_form_models",
+            "description": "用户进入表单设计页面",
+            "spendTime": "0.287 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_importApplication",
+            "description": "用户导入应用",
+            "spendTime": "0.00102 s",
+            "status": "失败",
+            "log": [
+                "",
+                "Traceback (most recent call last):\n",
+                "  File \"D:\\Software\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"D:\\Software\\python\\lib\\unittest\\case.py\", line 615, in run\n    testMethod()\n",
+                "  File \"D:\\pythonwork\\wujianlunTeam\\qiqiao_Interface_test\\testcase\\test_console.py\", line 115, in test_importApplication\n    a = open (file, 'rb')\n",
+                "FileNotFoundError: [Errno 2] No such file or directory: '..\\\\file_data\\\\昂星demo.zip'\n"
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_locales_en_US",
+            "description": "用户在选择语言处切换使用英文",
+            "spendTime": "0.179 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_locales_zh_TW",
+            "description": "用户在选择语言处切换使用英文",
+            "spendTime": "0.209 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_loginQiqiao",
+            "description": "用户退出当前账号",
+            "spendTime": "0.326 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_process_models",
+            "description": "用户进入流程设计页面",
+            "spendTime": "0.419 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_query_application_01",
+            "description": "用户搜索查找已存在应用",
+            "spendTime": "0.227 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_switch_business",
+            "description": "用户切换PC端页面",
+            "spendTime": "0.265 s",
+            "status": "成功",
+            "log": [
+                ""
+            ]
+        },
+        {
+            "className": "ConsoleTestSuit",
+            "methodName": "test_switch_form",
+            "description": "用户切换表单页面",
+            "spendTime": "0.224 s",
             "status": "成功",
             "log": [
                 ""
             ]
         }
     ],
-    "testName": "整合后的接口自动化测试报告",
-    "testAll": 1,
-    "testFail": 0,
-    "beginTime": "2019-10-15 12:01:05",
-    "totalTime": "0s",
+    "testName": "七巧接口自动化测试报告",
+    "testAll": 23,
+    "testFail": 1,
+    "beginTime": "2019-10-28 16:58:26",
+    "totalTime": "8s",
     "testSkip": 0,
     "testError": 0
 };
