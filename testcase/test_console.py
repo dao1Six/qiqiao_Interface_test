@@ -6,17 +6,22 @@ from urllib import parse
 
 import params as params
 import requests
+from requests import request
 
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 from ddt import ddt, data, unpack
+
+from util.codeController import CodeController
 
 
 @ddt
 class ConsoleTestSuit (unittest.TestCase):
     '''七巧开发平台测试类'''
 
-    applicationId = "a6aece61fa4248fc9a9d4721cb0775f7"  # 昂星demo应用
+    applicationId = "c4cafae231b042949861bd73a10a65c4"  # 昂星demo应用
+
+    domain = "https://qy.do1.com.cn/qiqiao/console/api/v1"
 
     def setUp(self):
         # 添加请求头，模拟浏览器访问
@@ -29,7 +34,7 @@ class ConsoleTestSuit (unittest.TestCase):
     def test_query_application_01(self):
         '''用户搜索查找已存在应用'''
         name = "OKR"
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications?delete=false&name=" + name + "&applicationGroupId=&page=1"
+        url = self.domain+"/workbench/applications?delete=false&name=" + name + "&applicationGroupId=&page=1"
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['data']['totalCount'], 1)
@@ -37,7 +42,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
     def test_appstore(self):
         '''用户进入应用市场页面'''
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/appstore/app_stores?name="
+        url = self.domain+"/appstore/app_stores?name="
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['code'], 0)
@@ -46,7 +51,7 @@ class ConsoleTestSuit (unittest.TestCase):
     def test_appstoreoOerview(self):
         '''用户应用市场查看应用详情'''
         applicationId = "93aad8fe99174ed7bf8a76060ea87ccb"
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/appstore/app_stores/" + applicationId # OKR应用
+        url = self.domain+"/appstore/app_stores/" + applicationId # OKR应用
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['code'], 0)
@@ -56,7 +61,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
     def test_locales_en_US(self):
         '''用户在选择语言处切换使用英文'''
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1//workbench/i18n/locales/en_US"
+        url = self.domain+"//workbench/i18n/locales/en_US"
         response = requests.put (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['code'], 0)
@@ -65,7 +70,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
     def test_locales_zh_TW(self):
         '''用户在选择语言处切换使用英文'''
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1//workbench/i18n/locales/zh_TW"
+        url = self.domain+"//workbench/i18n/locales/zh_TW"
         response = requests.put (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['code'], 0)
@@ -87,7 +92,7 @@ class ConsoleTestSuit (unittest.TestCase):
                    "X-Auth0-Token": "1430343df6493be7800d578600952ff4",
                    "Content-Type": "application/json"}
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/"
+        url = self.domain+"/workbench/applications/"
 
         data = {"createUserId": "05f35264ba3441c4be607c25f75cb492", "applicationGroupId": "",
                 "logo": "icon-zhenggaileixing", "mainColor": "#96DECC", "name": "创建应用接口测试", "status": [],
@@ -104,13 +109,14 @@ class ConsoleTestSuit (unittest.TestCase):
         # 删除应用
         applicationId = responseJson['data']['id']
         applicationName = parse.quote (responseJson['data']['name'])
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "?applicationName=" + applicationName
+        delUrl = self.domain+"/workbench/applications/" +applicationId+ "?applicationName=" + applicationName
         delresponse = requests.delete (delUrl, headers=headers)
-        self.assertEqual (responseJson['code'], 0)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
 
     def test_importApplication(self):
         '''用户导入应用'''
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/import"
+        url = self.domain+"/workbench/applications/import"
 
         file = '..\\file_data\\昂星demo.zip'
 
@@ -130,10 +136,18 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['code'], 0)
         self.assertEqual (responseJson['data']['name'], "昂星demo")
 
+        # 删除应用
+        applicationId = responseJson['data']['id']
+        applicationName = parse.quote (responseJson['data']['name'])
+        delUrl = self.domain+"/workbench/applications/" +applicationId+ "?applicationName=" + applicationName
+        delresponse = requests.delete (delUrl, headers=self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
+
     def test_create_groups(self):
         '''用户添加分组'''
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/groups"
+        url = self.domain+"/workbench/applications/groups"
 
         data = {"name": "A", "createUserId": None}
         data_json = json.dumps (data)
@@ -144,10 +158,18 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['code'], 0)
         self.assertEqual (responseJson['data']['name'], "A")
 
+        # 删除分组
+
+        delUrl = self.domain+"/workbench/applications/groups/"+\
+                 responseJson['data']['id']
+        delresponse = requests.delete (delUrl, headers=self.headers)
+        delresponseJson = delresponse.json ()
+        self.assertEqual (delresponseJson['code'], 0)
+
     def test_applications_groups(self):
         '''用户切换应用分组'''
         applicationGroupId = "5dad537cd662f60001460fa6"
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications?delete=false&name=&applicationGroupId=" + applicationGroupId + "&page=1"
+        url = self.domain+"/workbench/applications?delete=false&name=&applicationGroupId=" + applicationGroupId + "&page=1"
 
         data = {"name": "A", "createUserId": None}
         data_json = json.dumps (data)
@@ -158,12 +180,15 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['code'], 0)
         self.assertGreater (len (responseJson['data']['list']), 1)
 
+
+
     def test_applications_release(self):
         '''用户发布应用'''
 
-        applicationId = "5dad5206d662f60001460fa4"
+        applicationId = "5dad5206d662f60001460fa4"   #发布接口测试应用
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/release"
+
+        url = self.domain+"/workbench/applications/" +applicationId+ "/release"
         data = {"status": ["DEFAULT", "DEFAULT", "DEFAULT"]}  # 下架
         datajson = json.dumps (data)
 
@@ -181,7 +206,7 @@ class ConsoleTestSuit (unittest.TestCase):
     def test_creat_roles(self):
         '''用户为应用添加角色'''
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId + "/roles"
+        url = self.domain+"/workbench/applications/" + self.applicationId + "/roles"
 
         data = {"name": "A", "applicationId": "a6aece61fa4248fc9a9d4721cb0775f7", "defaultRole": False, "orderNo": 1}
 
@@ -195,7 +220,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
         # 删除角色
 
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/roles/" + \
+        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/roles/" + \
                  responseJson['data']['id']
         delresponse = requests.delete (delUrl, headers=self.headers)
         delresponseJson = delresponse.json ()
@@ -206,11 +231,11 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/form_models/list?applicationId=" + self.applicationId+ "&formGroupId="
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/form_models/list?applicationId=" + self.applicationId+ "&formGroupId="
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['code'], 0)
-        self.assertGreater (len (responseJson['data']), 2)
+        self.assertGreater (len (responseJson['data']), 1)
 
     def test_add_forms_groups(self):
         '''用户创建表单分组'''
@@ -218,7 +243,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
         name = "aaa"
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/forms/groups"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/forms/groups"
         data = json.dumps ({"applicationId": self.applicationId, "name": name})
         response = requests.post (url=url, headers=self.headers, data=data)
         responseJson = response.json ()
@@ -226,7 +251,7 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['data']['name'], name)
 
         # 删除分组
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/forms/groups/" + \
+        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/forms/groups/" + \
                  responseJson['data']['id']
         delresponse = requests.delete (delUrl, headers=self.headers)
         delresponseJson = delresponse.json ()
@@ -238,7 +263,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
         name = "aaa"
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/form_models"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/form_models"
         data = json.dumps (
             {"name": name, "formTableId": "form_", "formGroupId": "", "erType": "1", "applicationId": self.applicationId})
         response = requests.post (url=url, headers=self.headers, data=data)
@@ -247,7 +272,7 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['data']['name'], name)
 
         # 删除表单
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/form_models/" + \
+        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/form_models/" + \
                  responseJson['data']['id'] + "?formName=" + name
         delresponse = requests.delete (delUrl, headers=self.headers)
         delresponseJson = delresponse.json ()
@@ -257,20 +282,18 @@ class ConsoleTestSuit (unittest.TestCase):
         '''用户切换表单页面'''
 
 
-        formId = "b567fef0a75f49fc8e345943f2ed3c09"
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/forms/" + formId
+        formId = "e436de232fec4a77849c6599ed4793ba"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/forms/" + formId
 
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
-        self.assertEqual (responseJson['data']['formModelId'], 'b567fef0a75f49fc8e345943f2ed3c09')
+        self.assertEqual (responseJson['data']['formModelId'], formId)
         self.assertGreater (len (responseJson['data']['formFields']), 0)
 
     def test_process_models(self):
         '''用户进入流程设计页面'''
 
-
-
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/process_models"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/process_models"
 
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
@@ -282,7 +305,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
         name = "接口新建流程"
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/process_models"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/process_models"
         data = json.dumps ({"name": name, "icon": "icon-renwu"})
         response = requests.post (url=url, headers=self.headers, data=data)
         responseJson = response.json ()
@@ -290,7 +313,7 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['data']['name'], name)
 
         # 删除流程
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/processData/" + \
+        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/processData/" + \
                  responseJson['data']['id']
         delresponse = requests.delete (delUrl, headers=self.headers)
         delresponseJson = delresponse.json ()
@@ -304,7 +327,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
         name = "接口新建PC业务建模页面"
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/menus"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/menus"
         data = json.dumps (
             {"orderBy": 0, "name": name, "parentId": None, "applicationId": self.applicationId, "action": "PAGE",
              "device": "PC"})
@@ -314,7 +337,7 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['data']['name'], name)
 
         # 删除页面
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/menus/" + \
+        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/menus/" + \
                  responseJson['data']['id']
         delresponse = requests.delete (delUrl, headers=self.headers)
         delresponseJson = delresponse.json ()
@@ -325,9 +348,9 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 
-        businessId = "e88011e42402473fb98b4def6b5d2a1f"
+        businessId = "c2a97bbd6c6f4712b5d04f67ea5cd319"
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/business/" + businessId
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/business/" + businessId
 
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
@@ -336,12 +359,12 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 
-    @data (('PC', '退换货信息', 1, "用户点击PC业务建模设计"), ('MOBILE', '应用首页', 0, "用户点击移动业务建模设计"))
+    @data (('PC', '退换货信息', 0, "用户点击PC业务建模设计"), ('MOBILE', '应用首页', 0, "用户点击移动业务建模设计"))
     @unpack
     def test_device(self, device, dataName, dataLen,casename):
         """{3}"""
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/menus/tree?device=" + device
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/menus/tree?device=" + device
 
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
@@ -350,15 +373,14 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 
-    def test_creat_pc_menus(self):
+    def test_creat_mobile_menus(self):
         '''用户创建移动业务建模页面'''
-
 
         name = "接口新建移动业务建模页面"
 
-        url = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/menus"
+        url = self.domain+"/workbench/applications/" + self.applicationId+ "/menus"
         data = json.dumps (
-            {"name": name, "parentId": "5db6aff19481dd00016a22b3", "applicationId": "", "orderBy": 0, "action": "PAGE",
+            {"name": name, "parentId": "", "applicationId": "", "orderBy": 0, "action": "PAGE",
              "device": "MOBILE", "hasUseAuth": True,
              "extras": {"navigate": True, "navigateIcon": "icon-zhenggaileixing",
                         "roleIds": ["f16023cd89444ccfba1ceeb95d4225f7"], "index": False}})
@@ -368,11 +390,42 @@ class ConsoleTestSuit (unittest.TestCase):
         self.assertEqual (responseJson['data']['name'], name)
 
         # 删除页面
-        delUrl = "https://qy.do1.com.cn/qiqiao/console/api/v1/workbench/applications/" + self.applicationId+ "/menus/" + \
-                 responseJson['data']['id']
+        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/menus/" +responseJson['data']['id']
         delresponse = requests.delete (delUrl, headers=self.headers)
         delresponseJson = delresponse.json ()
         self.assertEqual (delresponseJson['code'], 0)
+
+    @data(('用户进入系统管理的平台操作日志页面','','','','','',500),
+          ('用户在平台操作日志页面填写操作人查询',CodeController.code_unquote('王浩'),'','','','',0),
+          ('用户在平台操作日志页面填写模块查询','','APP_MANAGER','APP_MANAGER_INFO','','',5),
+          ('用户在平台操作日志页面填写操作时间查询','','','','2019-10-28%2000%3A00%3A00','2019-10-29%2000%3A00%3A00',5),
+          ('用户在平台操作日志页面组合查询',CodeController.code_unquote('王浩'),'APP_MANAGER','APP_MANAGER_INFO','2019-10-28%2000%3A00%3A00','2019-10-29%2000%3A00%3A00',5))
+    @unpack
+    def test_log_query(self,casename,personName,module,submodule,startTime,endTime,datalen):
+        '''{0}'''
+
+        personNameCode = CodeController.code_unquote(personName)
+        url = self.domain+"/storage/log/operations/?limit=10&page=1&startTime="+startTime+"&endTime="+endTime+"&module="+module+"&submodule="+submodule+"&personName="+personNameCode
+
+        response = requests.get (url=url, headers=self.headers)
+        responseJson = response.json ()
+
+        self.assertLessEqual(len (responseJson['data']['list']), datalen)
+
+
+    def test_organization(self):
+        '''用户进入系统管理的企业信息页面'''
+        url = self.domain+"/authorize/admin/sessions/organization"
+
+        response = requests.get (url=url, headers=self.headers)
+        responseJson = response.json ()
+
+        self.assertEqual(responseJson['data']['orgName'], "接口自动化七巧")
+
+        self.assertEqual (responseJson['data']['purchaseVersionText'], "七巧专属VIP")
+
+
+
 
 
 
