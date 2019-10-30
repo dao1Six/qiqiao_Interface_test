@@ -13,6 +13,7 @@ from requests_toolbelt.multipart.encoder import MultipartEncoder
 from ddt import ddt, data, unpack
 
 from util.codeController import CodeController
+from util.requestController import RequestController
 
 
 @ddt
@@ -395,11 +396,11 @@ class ConsoleTestSuit (unittest.TestCase):
         delresponseJson = delresponse.json ()
         self.assertEqual (delresponseJson['code'], 0)
 
-    @data(('用户进入系统管理的平台操作日志页面','','','','','',500),
+    @data(('用户进入系统管理的平台操作日志页面','','','','','',5),
           ('用户在平台操作日志页面填写操作人查询',CodeController.code_unquote('王浩'),'','','','',0),
           ('用户在平台操作日志页面填写模块查询','','APP_MANAGER','APP_MANAGER_INFO','','',5),
           ('用户在平台操作日志页面填写操作时间查询','','','','2019-10-28%2000%3A00%3A00','2019-10-29%2000%3A00%3A00',5),
-          ('用户在平台操作日志页面组合查询',CodeController.code_unquote('王浩'),'APP_MANAGER','APP_MANAGER_INFO','2019-10-28%2000%3A00%3A00','2019-10-29%2000%3A00%3A00',5))
+          ('用户在平台操作日志页面组合查询',CodeController.code_unquote('王浩'),'APP_MANAGER','APP_MANAGER_INFO','2019-10-28%2000%3A00%3A00','2019-10-29%2000%3A00%3A00',0))
     @unpack
     def test_log_query(self,casename,personName,module,submodule,startTime,endTime,datalen):
         '''{0}'''
@@ -409,20 +410,71 @@ class ConsoleTestSuit (unittest.TestCase):
 
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
-
-        self.assertLessEqual(len (responseJson['data']['list']), datalen)
+        self.assertGreaterEqual(responseJson['data']['totalCount'], datalen)
 
 
     def test_organization(self):
         '''用户进入系统管理的企业信息页面'''
         url = self.domain+"/authorize/admin/sessions/organization"
-
-        response = requests.get (url=url, headers=self.headers)
-        responseJson = response.json ()
-
+        responseJson = RequestController.getRequestJson (url=url, headers=self.headers)
         self.assertEqual(responseJson['data']['orgName'], "接口自动化七巧")
-
         self.assertEqual (responseJson['data']['purchaseVersionText'], "七巧专属VIP")
+
+
+    def test_warningPage_application(self):
+        '''用户在低代码监控选择所属应用'''
+
+        url = self.domain+"/workbench/applications?page=1&pageSize=1000&delete=false"
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertGreaterEqual(len(responseJson['data']['list']), 4)
+
+    @data(('用户在低代码监控查询','','',1),
+          ('用户在低代码监控按应用模块查询',applicationId, 'USER_DEFINED',0))
+    @unpack
+    def test_warningPage_query(self,casename,appId,modelType,datalen):
+        '''{0}'''
+
+        url = self.domain+"/workbench/applications/scripts/warning?page=1&pageSize=10&applicationId="+appId+"&modelType="+modelType
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertGreaterEqual(len(responseJson['data']['list']),datalen)
+
+
+    def test_role_tag_refs(self):
+        '''用户在权限管理点击切换不同标签'''
+        tagId = "fc25fa6b1a474d5ba8aaa0d0a35164ca"  #标签：测试
+        url = self.domain+"/workbench/role_tag_refs?tagId="+tagId
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertEqual((responseJson['data'][5]['roles'][1]['check']),True)
+        self.assertEqual ((responseJson['data'][5]['roles'][1]['name']), '测试')
+
+
+    def test_application_permissions(self):
+        '''用户在权限管理点击查看应用详细权限'''
+        roleId = "d3376eb527934d47b5115ebc20f53d74"  #角色：应用管理员
+        pageId = "c2a97bbd6c6f4712b5d04f67ea5cd319"  #退换货信息页面id
+        url = self.domain+"/workbench/applications/"+self.applicationId+"/resources?parentId=0&roleId="+roleId+"&device=PC"
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+
+        self.assertEqual ((responseJson['data']['rightResource'][pageId][1]['checked']), True)
+        self.assertEqual (len(responseJson['data']['rightResource'][pageId]), 8)
+
+
+    def test_authorizer_info(self):
+        '''用户进入小程序设置页面'''
+        url = self.domain+"/workbench/miniprogram/authorization/authorizer_info"
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertEqual((responseJson['data']['miniProgramInfo']['authorizerAppid']),'')
+        self.assertEqual (len(responseJson['data']['miniProgramInfo']['categories']), 0)
+
+
+    def test_release_processModelIds(self):
+        '''用户发布流程'''
+        url = self.domain+"/workbench/miniprogram/authorization/authorizer_info"
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertEqual((responseJson['data']['miniProgramInfo']['authorizerAppid']),'')
+        self.assertEqual (len(responseJson['data']['miniProgramInfo']['categories']), 0)
+
+
 
 
 
