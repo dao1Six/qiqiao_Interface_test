@@ -14,7 +14,7 @@ curpath = os.path.dirname (os.path.realpath (__file__))
 reportpath = os.path.join (curpath, "test_report")
 if not os.path.exists (reportpath): os.mkdir (reportpath)
 # 用例目录
-case_path = os.path.join (curpath, "testcase")
+case_path = os.path.join (curpath, "interface_testcase")
 report_path = os.path.join(curpath, "test_report")  # 报告存放路径
 
 
