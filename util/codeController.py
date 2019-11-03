@@ -7,8 +7,8 @@ class CodeController():
 
     #字符编码
     @classmethod
-    def code_quote(cls,code):
-        return parse.quote (code)
+    def code_quote(cls,str):
+        return parse.quote (str)
 
 
 

@@ -322,32 +322,36 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 
-    def test_creat_pc_menus(self):
-        '''用户创建PC业务建模页面'''
+    @data(('用户创建PC业务建模分组',{"orderBy":0,"name":"a","parentId":None,"applicationId":"c4cafae231b042949861bd73a10a65c4","action":"MENU","device":"PC"}),
+          ('用户创建小程序业务建模分组',{"name":"ces","parentId":"","applicationId":"","orderBy":0,"action":"MENU","device":"MINI_PROGRAM","hasUseAuth":False,"extras":{"navigate":False,"navigateIcon":"","roleIds":[]}}),
+          ('用户创建移动业务建模分组',{"name":"ds","parentId":"","applicationId":"","orderBy":0,"action":"MENU","device":"MOBILE","hasUseAuth":True,"extras":{"navigate":False,"navigateIcon":"","roleIds":[]}}),
 
-
-        name = "接口新建PC业务建模页面"
+          ('用户创建PC业务建模页面',
+           {"orderBy": 0, "name": "dd", "parentId": None, "applicationId": "c4cafae231b042949861bd73a10a65c4",
+            "action": "PAGE", "device": "PC"}),
+          ('用户创建小程序业务建模页面', {"name":"dasd","parentId":"","applicationId":"","orderBy":0,"action":"PAGE","device":"MINI_PROGRAM","hasUseAuth":False,"extras":{"navigate":False,"navigateIcon":"icon-zhenggaileixing","roleIds":[],"index":False}}),
+          ('用户创建移动业务建模页面',
+           {"name": "da", "parentId": "", "applicationId": "", "orderBy": 0, "action": "PAGE", "device": "MOBILE",
+            "hasUseAuth": True, "extras": {"navigate": False, "navigateIcon": "icon-zhenggaileixing",
+                                           "roleIds": ["d3376eb527934d47b5115ebc20f53d74"], "index": False}}),
+          )
+    @unpack
+    def test_creat_menus(self,casename,data):
+        '''{0}'''
 
         url = self.domain+"/workbench/applications/" + self.applicationId+ "/menus"
-        data = json.dumps (
-            {"orderBy": 0, "name": name, "parentId": None, "applicationId": self.applicationId, "action": "PAGE",
-             "device": "PC"})
-        response = requests.post (url=url, headers=self.headers, data=data)
-        responseJson = response.json ()
+        responseJson = RequestController.postRequestJson (url=url, headers=self.headers, data=data)
         self.assertEqual (responseJson['code'], 0)
-        self.assertEqual (responseJson['data']['name'], name)
+        self.assertEqual (responseJson['data']['name'], data['name'])
 
         # 删除页面
         delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/menus/" + \
                  responseJson['data']['id']
-        delresponse = requests.delete (delUrl, headers=self.headers)
-        delresponseJson = delresponse.json ()
+        delresponseJson = RequestController.deleteRequestJson (delUrl, headers=self.headers)
         self.assertEqual (delresponseJson['code'], 0)
 
     def test_switch_business(self):
         '''用户切换PC端页面'''
-
-
 
         businessId = "c2a97bbd6c6f4712b5d04f67ea5cd319"
 
@@ -360,7 +364,7 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 
-    @data (('PC', '退换货信息', 0, "用户点击PC业务建模设计"), ('MOBILE', '应用首页', 0, "用户点击移动业务建模设计"))
+    @data (('PC', '退换货信息', 0, "用户点击PC业务建模设计"), ('MOBILE', '应用首页', 0, "用户点击移动业务建模设计"),('MINI_PROGRAM', '首页', 1, "用户进入小程序业务建模页面"))
     @unpack
     def test_device(self, device, dataName, dataLen,casename):
         """{3}"""
@@ -370,31 +374,9 @@ class ConsoleTestSuit (unittest.TestCase):
         response = requests.get (url=url, headers=self.headers)
         responseJson = response.json ()
         self.assertEqual (responseJson['data'][0]['name'], dataName)
-        self.assertGreater (len (responseJson['data']), dataLen)
+        self.assertGreaterEqual(len (responseJson['data']), dataLen)
 
 
-
-    def test_creat_mobile_menus(self):
-        '''用户创建移动业务建模页面'''
-
-        name = "接口新建移动业务建模页面"
-
-        url = self.domain+"/workbench/applications/" + self.applicationId+ "/menus"
-        data = json.dumps (
-            {"name": name, "parentId": "", "applicationId": "", "orderBy": 0, "action": "PAGE",
-             "device": "MOBILE", "hasUseAuth": True,
-             "extras": {"navigate": True, "navigateIcon": "icon-zhenggaileixing",
-                        "roleIds": ["f16023cd89444ccfba1ceeb95d4225f7"], "index": False}})
-        response = requests.post (url=url, headers=self.headers, data=data)
-        responseJson = response.json ()
-        self.assertEqual (responseJson['code'], 0)
-        self.assertEqual (responseJson['data']['name'], name)
-
-        # 删除页面
-        delUrl = self.domain+"/workbench/applications/" + self.applicationId+ "/menus/" +responseJson['data']['id']
-        delresponse = requests.delete (delUrl, headers=self.headers)
-        delresponseJson = delresponse.json ()
-        self.assertEqual (delresponseJson['code'], 0)
 
     @data(('用户进入系统管理的平台操作日志页面','','','','','',5),
           ('用户在平台操作日志页面填写操作人查询',CodeController.code_unquote('王浩'),'','','','',0),
@@ -463,16 +445,107 @@ class ConsoleTestSuit (unittest.TestCase):
         '''用户进入小程序设置页面'''
         url = self.domain+"/workbench/miniprogram/authorization/authorizer_info"
         responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
-        self.assertEqual((responseJson['data']['miniProgramInfo']['authorizerAppid']),'')
+        self.assertIsNotNone((responseJson['data']['miniProgramInfo']['authorizerAppid']))
         self.assertEqual (len(responseJson['data']['miniProgramInfo']['categories']), 0)
 
 
     def test_release_processModelIds(self):
-        '''用户发布流程'''
-        url = self.domain+"/workbench/miniprogram/authorization/authorizer_info"
+        '''用户发布下架流程'''
+        processModelIds = 'e60177c4b0f347f49ec15505def5184a'
+        xiajia = 'DISRELEASE'  #下架
+        fabu = 'RELEASE'  #上架
+
+        #先上架
+        url = self.domain+"/workbench/applications/0/process_models/release?processModelIds="+processModelIds+"&processStatusEnum="+fabu
+        responseJson = RequestController.putRequestJson(url=url,headers=self.headers,data=None)
+        self.assertEqual(responseJson['msg'],'执行成功')
+
+        #下架
+        xiajiaurl = self.domain+"/workbench/applications/0/process_models/release?processModelIds="+processModelIds+"&processStatusEnum="+xiajia
+        xiajiaresponseJson = RequestController.putRequestJson(url=xiajiaurl,headers=self.headers,data=None)
+        self.assertEqual(xiajiaresponseJson['msg'],'执行成功')
+
+
+
+    def test_portal_settings(self):
+        '''用户进入门户设置的基础设置页面'''
+        url = self.domain+"/workbench//portal_settings"
         responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
-        self.assertEqual((responseJson['data']['miniProgramInfo']['authorizerAppid']),'')
-        self.assertEqual (len(responseJson['data']['miniProgramInfo']['categories']), 0)
+        self.assertEqual(responseJson['msg'],'执行成功')
+        self.assertIsNotNone (responseJson['data']['name'])
+
+
+
+    @data(('用户编辑门户名称',{"name":'接口测试',"logoPath":"","pcBackgrounPath":"","applicationNum":"SIX_COUNT","processNum":"SIX_COUNT"}),
+          ('用户设置PC端常用应用数量',{"name":'接口测试',"logoPath":"","pcBackgrounPath":"","applicationNum":"EIGHT_COUNT","processNum":"SIX_COUNT"}),
+          ('用户设置PC端常用流程数量', {"name": '接口测试', "logoPath": "", "pcBackgrounPath": "", "applicationNum": "SIX_COUNT",
+                     "processNum": "EIGHT_COUNT"}) )
+    @unpack
+    def test_portal_settings_modify(self,casename,json):
+        '''{0}'''
+        url = self.domain+"/workbench//portal_settings"
+        responseJson = RequestController.postRequestJson (url=url, headers=self.headers,data=json)
+        self.assertEqual (responseJson['data']['name'],json['name'])
+        self.assertEqual (responseJson['data']['applicationNum'], json['applicationNum'])
+        self.assertEqual (responseJson['data']['processNum'], json['processNum'])
+
+
+    def test_process_visible_permissions(self):
+        '''用户配置流程可见权限'''
+        url = self.domain+"/workbench/process_visible_permissions"
+        json = {"applicationId":"c4cafae231b042949861bd73a10a65c4","applicationName":"昂星demo","applicationOrderBy":0,"createTime":1572317073000,"createUserId":"05f35264ba3441c4be607c25f75cb492","delete":False,"departIds":["9b5acd0ced7f4c4794fcd855083a02ce","44eb0451b8d7459488a1b4405c0b9766"],"id":"","processModelId":"e60177c4b0f347f49ec15505def5184a","processModelName":"销售退货流程","processModelOrderBy":0,"status":"DISRELEASE","tagIds":[],"tenantId":"2ade557c80d0430d9eee7589b30e4447","updateTime":1572317073000,"userIds":[],"tags":[{"id":"9b5acd0ced7f4c4794fcd855083a02ce","name":"质量委员会","type":"departments"},{"id":"44eb0451b8d7459488a1b4405c0b9766","name":"事业三部","type":"departments"}],"rowIndex":1}
+
+        json2 = {"applicationId":"c4cafae231b042949861bd73a10a65c4","applicationName":"昂星demo","applicationOrderBy":0,"createTime":1572317073000,"createUserId":"05f35264ba3441c4be607c25f75cb492","delete":False,"departIds":[],"id":"","processModelId":"e60177c4b0f347f49ec15505def5184a","processModelName":"销售退货流程","processModelOrderBy":0,"status":"DISRELEASE","tagIds":[],"tenantId":"2ade557c80d0430d9eee7589b30e4447","updateTime":1572317073000,"userIds":[],"tags":[],"rowIndex":1}
+
+        responseJson = RequestController.postRequestJson (url=url, headers=self.headers,data=json)  #授权
+        self.assertEqual (len(responseJson['data']['departIds']),2)
+
+        responseJson = RequestController.postRequestJson (url=url, headers=self.headers,data=json2)  #还原
+        self.assertEqual (len(responseJson['data']['departIds']),0)
+
+
+
+    def test_process(self):
+        '''用户进入流程发布设置页面'''
+        url = self.domain+"/workbench/process_visible_permissions?applicationName=&status="
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertEqual(responseJson['msg'],'执行成功')
+        self.assertGreaterEqual (responseJson['data']['processVisiblePermissionRestPage']['totalCount'],7)
+
+
+    @data(
+        ('用户访问应用低代码中心','',1),
+        ('用户在低代码查询已选择的脚本所属模型','USER_DEFINED',0)
+    )
+    @unpack
+    def test_scriptsPage(self,casename,modelType,datalen):
+        '''{0}'''
+        url = self.domain+"/workbench/applications/5db92b05eadba6000150f3b9/scripts?pageSize=10&page=1&status=&modelType="+modelType
+        responseJson = RequestController.getRequestJson(url=url,headers=self.headers)
+        self.assertEqual(responseJson['msg'],'执行成功')
+        self.assertGreaterEqual (responseJson['data']['totalCount'],datalen)
+
+
+    @data(
+        ('用户更改PC端业务角色权限','PC',["c2a97bbd6c6f4712b5d04f67ea5cd319","e24dfb7b215642d189a3e20a4fe960d9","ad90ead228f34e51b9ad0ab9bcc438df","f80561f7438543af94f344a8230a40d3","d34b6cedb49c45a4b7f2a8c46989a751","cb8c88bc6c7e47fc98e8b6577486fa85","c9fd1946386d4be1a8ca2ea94241f192","bb3ab08c01044a94830424c655782f1e","aac988e03e95427fa5d9324c5dce01e3"]),
+        ('用户更改移动端门户角色权限','MOBILE',["a553d6a863a64d8ba1afbcde0554dd7d"])
+    )
+    @unpack
+    def test_(self,casename,device,data):
+        ''''''
+        roleid = "5dba87241536b40001dbcb90"
+        url = self.domain + "/workbench/applications/"+self.applicationId+"/resources/roles/"+roleid+"?device="+device
+        responseJson = RequestController.putRequestJson (url=url, headers=self.headers,data=data)
+        self.assertEqual (responseJson['msg'], '执行成功')
+
+        #还原
+        responseJson2 = RequestController.putRequestJson (url=url, headers=self.headers,data=[])
+        self.assertEqual (responseJson2['msg'], '执行成功')
+
+
+
+
+
 
 
 
@@ -484,4 +557,9 @@ class ConsoleTestSuit (unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main ()
+    # 构造测试集
+    suite = unittest.TestSuite ()
+    suite.addTest (ConsoleTestSuit("test_portal_settings"))
+    # 执行测试
+    runner = unittest.TextTestRunner ()
+    runner.run (suite)
