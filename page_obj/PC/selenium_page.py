@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 
-class Page(object):
+class SeleniumPage(object):
     '''
     基础类，用于页面对象类的继承
     '''

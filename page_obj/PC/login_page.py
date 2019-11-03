@@ -1,10 +1,9 @@
 #登录界面
 
-from page_obj.page import Page
-from pubilc.driver import pcdriver
+from page_obj.PC.selenium_page import SeleniumPage
 
 
-class LoginPage(Page):
+class LoginPage(SeleniumPage):
     '''登录界面'''
 
     login_url = 'https://qy.do1.com.cn/qiqiao/runtime'
@@ -27,4 +26,5 @@ class LoginPage(Page):
         self.find_elem_visibleByXPATH(self.zhanghao).send_keys(username)
         self.find_elem_visibleByXPATH(self.mima).send_keys(password)
         self.find_elem_is_clickableByXPATH(self.anniu).click()
+
 
