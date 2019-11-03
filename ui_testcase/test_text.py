@@ -11,7 +11,7 @@ from ui_testcase.myunit import MyTest
 class Text(myunit.MyTest):
 
     # def setUp(self):
-    #     #先登录
+    #     #先登录1
     #     self.driver = pcdriver()
     #     self.driver.maximize_window()
 
