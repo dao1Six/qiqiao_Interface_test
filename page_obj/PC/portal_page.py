@@ -12,7 +12,7 @@ class PortalPage(SeleniumPage):
     #传入menu名进入
     def goto_menu(self,menu):
 
-        self.find_elem_is_clickableByXPATH("//a[@class='header_menu_title' and text()="+menu+"]").click()
+        self.find_elem_visibleByXPATH("//a[@class='header_menu_title' and text()='"+menu+"']").click()
 
 
 

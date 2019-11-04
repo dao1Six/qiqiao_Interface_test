@@ -1,4 +1,5 @@
 #登录界面
+import time
 
 from page_obj.PC.selenium_page import SeleniumPage
 
@@ -11,6 +12,8 @@ class LoginPage(SeleniumPage):
     zhanghao = "//input[@title='请输入账号']"
     mima = "//input[@title='请输入密码']"
     anniu = "//button[text()='登录']"
+
+    alertsuccess = "//div[@role='alert' and @class='el-message el-message--success']"
 
 
 
@@ -26,5 +29,7 @@ class LoginPage(SeleniumPage):
         self.find_elem_visibleByXPATH(self.zhanghao).send_keys(username)
         self.find_elem_visibleByXPATH(self.mima).send_keys(password)
         self.find_elem_is_clickableByXPATH(self.anniu).click()
-
+        #等待
+        self.wait_elem_invisibility(self.alertsuccess)
+        time.sleep(2)
 

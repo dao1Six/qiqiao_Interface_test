@@ -15,13 +15,10 @@ class Text(myunit.MyTest):
         seleniumPage = SeleniumPage(self.driver)
         loginpage = LoginPage(self.driver)
         loginpage.user_login("wujianlun@jiekou","qiqiao123")
-        # h = self.driver.title
-        # time.sleep(2)
-        # self.assertEqual(h,"接口自动化七巧广泛广泛")
         portalpage = PortalPage(self.driver)
         portalpage.goto_menu("应用")
         applicationPage = applicationMenuPage(self.driver)
-        applicationMenuPage.enter_application('接口测试')
+        applicationPage.enter_application("接口测试")
 
 
 

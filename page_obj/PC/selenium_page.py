@@ -35,7 +35,7 @@ class SeleniumPage(object):
         '''通过jq将元素隐藏'''
         script = '$("' + locator + '").hide()'
         self.driver.execute_script(script)
-        self.wait_elem_disappear(locator)
+
 
     def show_elem_by_jq(self, locator):
         '''通过jq将元素显示'''
@@ -135,11 +135,19 @@ class SeleniumPage(object):
         except TimeoutException as ex:
             print('wait_elem_visible 异常：%s 获取 %s 超时' % (ex, locator))
 
-    def wait_elem_disappear(self, locator, timeout=3):
+    def wait_elem_disappearByCSS(self, locator, timeout=3):
         # 一直等待某个元素消失，默认超时3秒只做等待动作不返回值
         try:
             WebDriverWait(self.driver, timeout).until_not(
                 EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
+        except TimeoutException as ex:
+            print('wait_elem_visible 异常：%s 获取 %s 超时' % (ex, locator))
+
+    def wait_elem_disappearByXPATH(self, locator, timeout=3):
+        # 一直等待某个元素消失，默认超时3秒只做等待动作不返回值
+        try:
+            WebDriverWait(self.driver, timeout).until_not(
+                EC.visibility_of_element_located((By.XPATH, locator)))
         except TimeoutException as ex:
             print('wait_elem_visible 异常：%s 获取 %s 超时' % (ex, locator))
 
@@ -201,6 +209,6 @@ class SeleniumPage(object):
         '''等待元素不可见，但仍存在于dom'''
         try:
             WebDriverWait(self.driver, timeout).until(
-                EC.invisibility_of_element_located((By.CSS_SELECTOR, locator)))
+                EC.invisibility_of_element_located((By.XPATH, locator)))
         except TimeoutException:
             print('元素一直可见')
