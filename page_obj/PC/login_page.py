@@ -30,6 +30,5 @@ class LoginPage(SeleniumPage):
         self.find_elem_visibleByXPATH(self.mima).send_keys(password)
         self.find_elem_is_clickableByXPATH(self.anniu).click()
         #等待
-        self.wait_elem_invisibility(self.alertsuccess)
-        time.sleep(2)
+        time.sleep(1)
 

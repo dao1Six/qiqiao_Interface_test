@@ -1,4 +1,8 @@
 #应用门户页面
+import time
+
+from selenium.common.exceptions import ElementClickInterceptedException
+
 from page_obj.PC.selenium_page import SeleniumPage
 
 
@@ -12,7 +16,7 @@ class PortalPage(SeleniumPage):
     #传入menu名进入
     def goto_menu(self,menu):
 
-        self.find_elem_visibleByXPATH("//a[@class='header_menu_title' and text()='"+menu+"']").click()
+        self.clickElemByXpath("//a[@class='header_menu_title' and text()='"+menu+"']")
 
 
 

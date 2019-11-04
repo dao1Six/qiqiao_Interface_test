@@ -1,6 +1,10 @@
 import time
+import traceback
+from logging import exception
+
+from pip._vendor.retrying import retry
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support import expected_conditions as EC
@@ -212,3 +216,22 @@ class SeleniumPage(object):
                 EC.invisibility_of_element_located((By.XPATH, locator)))
         except TimeoutException:
             print('元素一直可见')
+
+    def retry_if_io_error(exception):
+        return isinstance(exception,)
+
+    retry(retry_on_exception=retry_if_io_error)
+    def clickElemByXpath(self, locator, timeout=10):
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.visibility_of_element_located((By.XPATH, locator))).click()
+        except Exception as e:
+            print(Exception, ":", e)
+            print("88888888888888888888888888888888888")
+            traceback.print_exc()
+
+
+
+    def clickElemByCSS(self, locator, timeout=10):
+        WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, locator))).click()
