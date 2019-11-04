@@ -24,6 +24,4 @@ class Text(myunit.MyTest):
         # loginpage = LoginPage(self.driver)
         # loginpage.user_login("wujianlun@jiekou","qiqiao123")
 
-        #do some做了一些测试
-
         time.sleep(5)
