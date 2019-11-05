@@ -2,17 +2,16 @@
 from page_obj.selenium_page import SeleniumPage
 
 
-class Data(SeleniumPage):
+class DataTime(SeleniumPage):
 
     #给日期组件输入值
-    def sendkeysToData(self,fieldName,key):
+    def sendkeysToDataTime(self,fieldName,datakey,timekey):
         locator = "div[title='"+fieldName+"'] input[type='text']"
-        self.sendkeysElemByCSS(locator,key)
+        dataElem = self.find_elemsByCSS(locator)[0]
+        timeElem = self.find_elemsByCSS(locator)[1]
+        dataElem.send_keys(datakey)
+        timeElem.send_keys(timekey)
         self.clickElemByCSS("div[title='"+fieldName+"']>label>span[title='"+fieldName+"']")
 
-
-        # elem = self.find_elemByCSS(locator)
-        # elem.clear()
-        # self.driver.execute_script("arguments[0].value='"+key+"';",elem)
 
     #获取日期组件的值

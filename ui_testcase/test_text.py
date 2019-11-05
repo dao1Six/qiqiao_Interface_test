@@ -31,6 +31,7 @@ class Text(myunit.MyTest):
         formPage = FormPage(self.driver)
         formPage.sendkeysToData("日期",'2018-11-22')
         formPage.sendkeysToTime("时间",'19:20')
+        formPage.sendkeysToDataTime("日期时间",'2018-11-22','19:20')
         formPage.submit_doc()
 
         time.sleep(5)

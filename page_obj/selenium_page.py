@@ -52,29 +52,7 @@ class SeleniumPage(object):
         script = '$("' + locator + '").remove()'  # 从dom移除元素
         self.driver.execute_script(script)
 
-    def find_elemByCSS(self, locator, timeout=5):
-        '''判断5s内，定位的元素是否存在dom结构里。存在则返回元素，不存在则返回None'''
-        try:
-            return WebDriverWait(self.driver, timeout).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
-        except:
-            return None
 
-    def find_elemByXPATH(self, locator, timeout=5):
-        '''判断5s内，定位的元素是否存在dom结构里。存在则返回元素，不存在则返回None'''
-        try:
-            return WebDriverWait(self.driver, timeout).until(
-                EC.presence_of_element_located((By.XPATH, locator)))
-        except:
-            return None
-
-    def find_elemsByCSS(self, locator, timeout=5):
-        '''判断5s内，定位的一组元素是否存在dom结构里。存在则返回元素列表，不存在则返回None'''
-        try:
-            return WebDriverWait(self.driver, timeout).until(
-                EC.presence_of_all_elements_located((By.CSS_SELECTOR, locator)))
-        except:
-            return None
 
     def find_elem_visibleByCSS(self, locator, timeout=10):
         '''判断5s内，定位的元素是否存在dom结构里并且可见。存在则返回元素，不存在则返回None'''
@@ -243,4 +221,40 @@ class SeleniumPage(object):
     def sendkeysElemByCSS(self, locator,key, timeout=10):
         WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, locator))).send_keys(key)
+
+
+    def find_elemByCSS(self, locator, timeout=5):
+        '''判断5s内，定位的元素是否存在dom结构里。存在则返回元素，不存在则返回None'''
+        try:
+            return WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
+        except:
+            return None
+
+
+    def find_elemByXPATH(self, locator, timeout=5):
+        '''判断5s内，定位的元素是否存在dom结构里。存在则返回元素，不存在则返回None'''
+        try:
+            return WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_element_located((By.XPATH, locator)))
+        except:
+            return None
+
+
+    def find_elemsByCSS(self, locator, timeout=5):
+        '''判断5s内，定位的一组元素是否存在dom结构里。存在则返回元素列表，不存在则返回None'''
+        try:
+            return WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_all_elements_located((By.CSS_SELECTOR, locator)))
+        except:
+            return None
+
+    def find_elemsByXPATH(self, locator, timeout=5):
+        '''判断5s内，定位的一组元素是否存在dom结构里。存在则返回元素列表，不存在则返回None'''
+        try:
+            return WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_all_elements_located((By.XPATH, locator)))
+        except:
+            return None
+
 
