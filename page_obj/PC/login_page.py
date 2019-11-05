@@ -1,7 +1,6 @@
 #登录界面
-import time
 
-from page_obj.PC.selenium_page import SeleniumPage
+from page_obj.selenium_page import SeleniumPage
 
 
 class LoginPage(SeleniumPage):
@@ -25,10 +24,8 @@ class LoginPage(SeleniumPage):
     def user_login(self, username,password):
         '''通过用户名密码登录'''
         self.open(self.login_url)
-        self.find_elem_is_clickableByXPATH(self.denglu).click()
-        self.find_elem_visibleByXPATH(self.zhanghao).send_keys(username)
-        self.find_elem_visibleByXPATH(self.mima).send_keys(password)
-        self.find_elem_is_clickableByXPATH(self.anniu).click()
-        #等待
-        time.sleep(1)
+        self.clickElemByXpath(self.denglu)
+        self.sendkeysElemByXpath(self.zhanghao,username)
+        self.sendkeysElemByXpath(self.mima,password)
+        self.clickElemByXpath(self.anniu)
 

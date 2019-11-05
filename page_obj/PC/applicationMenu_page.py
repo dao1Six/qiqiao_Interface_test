@@ -1,9 +1,9 @@
 #应用管理页面
 
-from page_obj.PC.selenium_page import SeleniumPage
+from page_obj.selenium_page import SeleniumPage
 
 
-class applicationMenuPage(SeleniumPage):
+class ApplicationMenuPage(SeleniumPage):
     '''应用管理页面'''
 
 

@@ -217,21 +217,30 @@ class SeleniumPage(object):
         except TimeoutException:
             print('元素一直可见')
 
-    def retry_if_io_error(exception):
-        return isinstance(exception,)
+####新方法
 
-    retry(retry_on_exception=retry_if_io_error)
+    @retry
     def clickElemByXpath(self, locator, timeout=10):
-        try:
-            WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_element_located((By.XPATH, locator))).click()
-        except Exception as e:
-            print(Exception, ":", e)
-            print("88888888888888888888888888888888888")
-            traceback.print_exc()
+
+        WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located((By.XPATH, locator))).click()
 
 
-
+    @retry
     def clickElemByCSS(self, locator, timeout=10):
         WebDriverWait(self.driver, timeout).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, locator))).click()
+
+
+    @retry
+    def sendkeysElemByXpath(self, locator,key, timeout=10):
+
+        WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located((By.XPATH, locator))).send_keys(key)
+
+
+    @retry
+    def sendkeysElemByCSS(self, locator,key, timeout=10):
+        WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, locator))).send_keys(key)
+

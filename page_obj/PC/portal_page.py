@@ -1,9 +1,6 @@
 #应用门户页面
-import time
 
-from selenium.common.exceptions import ElementClickInterceptedException
-
-from page_obj.PC.selenium_page import SeleniumPage
+from page_obj.selenium_page import SeleniumPage
 
 
 class PortalPage(SeleniumPage):
