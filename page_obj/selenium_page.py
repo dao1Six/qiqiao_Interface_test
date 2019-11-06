@@ -109,6 +109,14 @@ class SeleniumPage(object):
         except:
             return False
 
+    def wait_element_presence_(self, locator, timeout=5):
+        '''等待元素出现'''
+        try:
+            WebDriverWait(self.driver, timeout).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
+        except TimeoutException as ex:
+            print('wait_element_presence_ 异常：%s 获取 %s 超时' % (ex, locator))
+
     def wait_elem_visible(self, locator, timeout=5):
         # 一直等待某元素可见，默认超时3秒只做等待动作不返回值
         try:
@@ -214,13 +222,13 @@ class SeleniumPage(object):
     def sendkeysElemByXpath(self, locator,key, timeout=10):
 
         WebDriverWait(self.driver, timeout).until(
-            EC.visibility_of_element_located((By.XPATH, locator))).send_keys(key)
+            EC.presence_of_element_located((By.XPATH, locator))).send_keys(key)
 
 
     @retry
     def sendkeysElemByCSS(self, locator,key, timeout=10):
         WebDriverWait(self.driver, timeout).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, locator))).send_keys(key)
+            EC.presence_of_element_located((By.CSS_SELECTOR, locator))).send_keys(key)
 
 
     def find_elemByCSS(self, locator, timeout=5):

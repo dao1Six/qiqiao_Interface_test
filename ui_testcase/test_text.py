@@ -1,4 +1,5 @@
 #测试单行文本控件用例集
+import os
 import time
 
 from page_obj.PC.applicationDetails_page import ApplicationDetailsPage
@@ -11,6 +12,9 @@ from ui_testcase import myunit
 
 
 class Text(myunit.MyTest):
+
+    project_path = os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]+'\\qiqiao_Interface_test'
+    picpath = project_path+'\\file_data\\pic.jpeg'
 
 
     def setUp(self):
@@ -32,6 +36,7 @@ class Text(myunit.MyTest):
         formPage.sendkeysToData("日期",'2018-11-22')
         formPage.sendkeysToTime("时间",'19:20')
         formPage.sendkeysToDataTime("日期时间",'2018-11-22','19:20')
+        formPage.sendkeysToPicUpload("图片上传",self.picpath)
         formPage.submit_doc()
 
         time.sleep(5)
