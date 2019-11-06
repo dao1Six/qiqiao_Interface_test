@@ -1,4 +1,5 @@
 #表单页面
+from page_obj.PC.components.cascade_component import Cascade
 from page_obj.PC.components.datatime_component import DataTime
 from page_obj.PC.components.pic_Upload_component import PicUpload
 from page_obj.selenium_page import SeleniumPage
@@ -13,7 +14,7 @@ from page_obj.PC.components.user_component import User
 from page_obj.PC.components.address_component import Address
 
 
-class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Selection,User,Address):
+class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Selection,User,Address,Cascade):
     '''PC表单页面'''
     submit_button_loc = "//button[@type='button']/span[contains(text(),'提交')]"
 
