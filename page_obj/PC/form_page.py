@@ -7,9 +7,12 @@ from page_obj.PC.components.text_component import Text
 from page_obj.PC.components.textarea_components import Textarea
 from page_obj.PC.components.data_component import Data
 from page_obj.PC.components.time_component import Time
+from page_obj.PC.components.file_Upload_component import FileUpload
+from page_obj.PC.components.selection_component import Selection
+from page_obj.PC.components.user_component import User
 
 
-class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload):
+class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Selection,User):
     '''PC表单页面'''
     submit_button_loc = "//button[@type='button']/span[contains(text(),'提交')]"
 

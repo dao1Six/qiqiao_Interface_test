@@ -32,8 +32,14 @@ class SeleniumPage(object):
 
     def click_elem_by_js(self, locator):
         '''通过js点击元素'''
-        elem = self.find_elem(locator)
+        elem = self.find_elemByCSS(locator)
         self.driver.execute_script("arguments[0].click();", elem)
+
+
+    def remove_locator_Attr(self, locator,attr):
+        '''js设置元素属性'''
+        elem = self.find_elemByXPATH (locator)
+        self.driver.execute_script ("arguments[0].removeAttribute('"+attr+"');", elem)
 
     def hide_elem_by_jq(self, locator):
         '''通过jq将元素隐藏'''
@@ -54,7 +60,9 @@ class SeleniumPage(object):
 
 
 
-    def find_elem_visibleByCSS(self, locator, timeout=10):
+
+
+    def find_elem_visibleByCSS(self, locator, timeout=2):
         '''判断5s内，定位的元素是否存在dom结构里并且可见。存在则返回元素，不存在则返回None'''
         try:
             return WebDriverWait(self.driver, timeout).until(
@@ -62,7 +70,7 @@ class SeleniumPage(object):
         except:
             return None
 
-    def find_elem_visibleByXPATH(self, locator, timeout=10):
+    def find_elem_visibleByXPATH(self, locator, timeout=2):
         '''判断5s内，定位的元素是否存在dom结构里并且可见。存在则返回元素，不存在则返回None'''
         try:
             return WebDriverWait(self.driver, timeout).until(
@@ -205,30 +213,33 @@ class SeleniumPage(object):
 
 ####新方法
 
-    @retry
-    def clickElemByXpath(self, locator, timeout=10):
 
-        WebDriverWait(self.driver, timeout).until(
-            EC.visibility_of_element_located((By.XPATH, locator))).click()
-
-
-    @retry
-    def clickElemByCSS(self, locator, timeout=10):
-        WebDriverWait(self.driver, timeout).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, locator))).click()
+    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    def clickElemByXpath(self, locator, timeout=2):
+        elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.click()
 
 
-    @retry
-    def sendkeysElemByXpath(self, locator,key, timeout=10):
+    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    def clickElemByCSS(self, locator, timeout=2):
+        elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.click()
 
-        WebDriverWait(self.driver, timeout).until(
-            EC.presence_of_element_located((By.XPATH, locator))).send_keys(key)
+
+    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    def sendkeysElemByXpath(self, locator,key, timeout=2):
+        elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.XPATH, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.send_keys(key)
 
 
-    @retry
-    def sendkeysElemByCSS(self, locator,key, timeout=10):
-        WebDriverWait(self.driver, timeout).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, locator))).send_keys(key)
+    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    def sendkeysElemByCSS(self, locator,key, timeout=2):
+        elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.send_keys(key)
 
 
     def find_elemByCSS(self, locator, timeout=5):
