@@ -48,6 +48,7 @@ class User(SeleniumPage):
         for name in DeptNameList:
             self.clickElemByXpath_Visibility ("//input[@placeholder='搜索部门']")
             self.sendkeysElemByXpath_Visibility("//input[@placeholder='搜索部门']",name)
-            self.clickElemByXpath_Presence("//li[@class='el-select-dropdown__item hover']/span[contains(text(),'"+name+"')]")
+            e = self.find_elemByXPATH("//span[contains(text(),'"+name+"')]/parent::li")
+            e.click()
         self.clickElemByXpath_Visibility(self.DeptquerenButton)
 

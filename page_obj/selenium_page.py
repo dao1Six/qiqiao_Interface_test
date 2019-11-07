@@ -214,47 +214,50 @@ class SeleniumPage(object):
 ####新方法
 
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByXpath_Visibility(self, locator, timeout=2):
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.click()
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByXpath_Presence(self, locator, timeout=2):
+        print("try....")
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.click()
 
 
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+
+
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByCSS_Visibility(self, locator, timeout=2):
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.click()
 
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByXpath_Visibility(self, locator,key, timeout=2):
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByXpath_Presence(self, locator,key, timeout=2):
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
 
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByCSS_Visibility(self, locator,key, timeout=2):
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
 
-    @retry(stop_max_attempt_number=5,stop_max_delay=5000,wait_fixed = 1000)
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByCSS_Presence(self, locator,key, timeout=2):
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
