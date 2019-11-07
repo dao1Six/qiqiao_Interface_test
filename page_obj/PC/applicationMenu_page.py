@@ -14,4 +14,4 @@ class ApplicationMenuPage(SeleniumPage):
     #进入应用
     def enter_application(self,name):
         #点击固定分组的应用
-        self.clickElemByCSS("div.precessCenter_card1 > div.el-collapse-item__wrap a[title='"+name+"']")
+        self.clickElemByCSS_Visibility("div.precessCenter_card1 > div.el-collapse-item__wrap a[title='"+name+"']")

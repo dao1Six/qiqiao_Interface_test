@@ -9,6 +9,9 @@ import os
 
 from BeautifulReport import BeautifulReport
 
+from interface_testcase.test_console import ConsoleTestSuit
+from reportRunner import Report
+
 curpath = os.path.dirname (os.path.realpath (__file__))
 # 报告目录
 reportpath = os.path.join (curpath, "test_report")
@@ -18,11 +21,15 @@ case_path = os.path.join (curpath, "interface_testcase")
 report_path = os.path.join(curpath, "test_report")  # 报告存放路径
 
 
-discover = unittest.defaultTestLoader.discover (case_path, pattern="test_*.py")
+# discover = unittest.defaultTestLoader.discover (case_path, pattern="test_*.py")
 # discover相当于在指定的case所在的路径里寻找所有名称模式匹配pattern的文件并加载其内容
-result = BeautifulReport(discover)
-result.report(filename='test_report', description='七巧接口自动化测试报告', log_path=report_path)
+# result = BeautifulReport(discover)
+# result.report(filename='test_report', description='七巧接口自动化测试报告', log_path=report_path)
 
+suite = unittest.TestSuite ()
+suite = unittest.makeSuite(ConsoleTestSuit,prefix='test')
+reportRunner = Report ()
+reportRunner.run_suite_output_xml_report (suite)
 
 
 

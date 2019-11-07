@@ -20,4 +20,4 @@ class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Sele
 
     #提交表单
     def submit_doc(self):
-        self.clickElemByXpath(self.submit_button_loc)
+        self.clickElemByXpath_Visibility(self.submit_button_loc)

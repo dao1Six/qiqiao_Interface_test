@@ -11,7 +11,7 @@ class DataTime(SeleniumPage):
         timeElem = self.find_elemsByCSS(locator)[1]
         dataElem.send_keys(datakey)
         timeElem.send_keys(timekey)
-        self.clickElemByCSS("div[title='"+fieldName+"']>label>span[title='"+fieldName+"']")
+        self.clickElemByCSS_Visibility("div[title='"+fieldName+"']>label>span[title='"+fieldName+"']")
 
 
     #获取日期组件的值

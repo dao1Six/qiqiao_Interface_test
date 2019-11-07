@@ -24,8 +24,8 @@ class LoginPage(SeleniumPage):
     def user_login(self, username,password):
         '''通过用户名密码登录'''
         self.open(self.login_url)
-        self.clickElemByXpath(self.denglu)
-        self.sendkeysElemByXpath(self.zhanghao,username)
-        self.sendkeysElemByXpath(self.mima,password)
-        self.clickElemByXpath(self.anniu)
+        self.clickElemByXpath_Visibility(self.denglu)
+        self.sendkeysElemByXpath_Visibility(self.zhanghao,username)
+        self.sendkeysElemByXpath_Visibility(self.mima,password)
+        self.clickElemByXpath_Visibility(self.anniu)
 
