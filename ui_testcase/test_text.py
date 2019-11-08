@@ -48,6 +48,7 @@ class Text(myunit.MyTest):
         # formPage.sendkeysToMultiUser ('人员多选', ['吴健伦','王浩'])
         # formPage.sendkeysToMonomialDept ('部门单选', '创新')
         # formPage.sendkeysToMultiDept ('部门多选', ['创新','董办'])
+        formPage.sendkeysToCascade('级联选择','A/a')
         # formPage.sendkeysToCascade('级联选择', ['A','a'])
         # formPage.sendkeysToAddress('地址选择器', ['四川省', '眉山市','彭山县'],'到ID阿段搜ID结案率扩大')
         formPage.submit_doc()
