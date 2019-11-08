@@ -1,17 +1,17 @@
-#应用门户页面
+#工作台页面
 
 from page_obj.selenium_page import SeleniumPage
 
 
 class PortalPage(SeleniumPage):
-    '''应用门户页面'''
+    '''工作台页面'''
 
     #Action
 
 
 
-    #传入menu名进入
-    def goto_menu(self,menu):
+    #点击菜单进入相应菜单页面
+    def goto_menuPage(self,menu):
 
         self.clickElemByXpath_Visibility("//a[@class='header_menu_title' and text()='"+menu+"']")
 

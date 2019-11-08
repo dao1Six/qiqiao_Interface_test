@@ -25,7 +25,7 @@ class Text(myunit.MyTest):
         loginpage = LoginPage(self.driver)
         loginpage.user_login("wujianlun@jiekou","qiqiao123")
         portalpage = PortalPage(self.driver)
-        portalpage.goto_menu("应用")
+        portalpage.goto_menuPage("应用")
         applicationPage = ApplicationMenuPage(self.driver)
         applicationPage.enter_application("接口测试")
 
@@ -48,9 +48,11 @@ class Text(myunit.MyTest):
         # formPage.sendkeysToMultiUser ('人员多选', ['吴健伦','王浩'])
         # formPage.sendkeysToMonomialDept ('部门单选', '创新')
         # formPage.sendkeysToMultiDept ('部门多选', ['创新','董办'])
-        formPage.sendkeysToCascade('级联选择','A/a')
         # formPage.sendkeysToCascade('级联选择', ['A','a'])
         # formPage.sendkeysToAddress('地址选择器', ['四川省', '眉山市','彭山县'],'到ID阿段搜ID结案率扩大')
+        # formPage.sendkeysToText('单行文本','的似的是的')
+        # formPage.sendkeysToNumber('数字','34')
+        # formPage.sendkeysToTextarea('多行文本','德哈卡等哈数据库和撒撒娇撒看见哈达时候')
         formPage.submit_doc()
 
 
