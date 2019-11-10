@@ -3,6 +3,10 @@ import os
 import time
 import unittest
 
+
+from ddt import ddt, data, unpack
+
+
 from page_obj.PC.applicationDetails_page import ApplicationDetailsPage
 from page_obj.PC.applicationMenu_page import ApplicationMenuPage
 from page_obj.PC.form_page import FormPage
@@ -12,7 +16,7 @@ from page_obj.selenium_page import SeleniumPage
 from reportRunner import Report
 from ui_testcase import myunit
 
-
+@ddt
 class Text(myunit.MyTest):
 
     project_path = os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]+'\\qiqiao_Interface_test'
@@ -29,9 +33,15 @@ class Text(myunit.MyTest):
         applicationPage = ApplicationMenuPage(self.driver)
         applicationPage.enter_application("接口测试")
 
+    def tearDown(self):
+        self.driver.quit()
 
 
-    def test_01(self):
+    @data(('case001','蒂尼'),
+         ('case002','大萨达多'))
+    @unpack
+    def test_01(self,casename,textvalue):
+        '''{0}'''
         applicationDetailPage = ApplicationDetailsPage (self.driver)
         applicationDetailPage.clickViewButton("添加")
         formPage = FormPage(self.driver)
@@ -50,7 +60,7 @@ class Text(myunit.MyTest):
         # formPage.sendkeysToMultiDept ('部门多选', ['创新','董办'])
         # formPage.sendkeysToCascade('级联选择', ['A','a'])
         # formPage.sendkeysToAddress('地址选择器', ['四川省', '眉山市','彭山县'],'到ID阿段搜ID结案率扩大')
-        # formPage.sendkeysToText('单行文本','的似的是的')
+        formPage.sendkeysToText('单行文本',textvalue)
         # formPage.sendkeysToNumber('数字','34')
         # formPage.sendkeysToTextarea('多行文本','德哈卡等哈数据库和撒撒娇撒看见哈达时候')
         formPage.submit_doc()

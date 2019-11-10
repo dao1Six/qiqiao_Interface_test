@@ -4,11 +4,14 @@ from page_obj.selenium_page import SeleniumPage
 
 class Data(SeleniumPage):
 
+    data_Cssloc = "div[title='%s'] input[type='text']"  # 日期组件字段Css定位
+    data_label_Cssloc = "div[title='%s']>label>span[title='%title']"
+
     #给日期组件输入值
     def sendkeysToData(self,fieldName,key):
-        locator = "div[title='"+fieldName+"'] input[type='text']"
-        self.sendkeysElemByCSS_Visibility(locator,key)
-        self.clickElemByCSS_Visibility("div[title='"+fieldName+"']>label>span[title='"+fieldName+"']")
+
+        self.sendkeysElemByCSS_Visibility(self.data_Cssloc.replace('%s',fieldName),key)
+        self.clickElemByCSS_Visibility(self.data_label_Cssloc.replace('%s',fieldName).replace('%title',fieldName))
 
 
         # elem = self.find_elemByCSS(locator)
