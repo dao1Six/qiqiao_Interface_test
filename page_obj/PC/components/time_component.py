@@ -7,8 +7,12 @@ class Time(SeleniumPage):
     time_input_loc = "div[title='%s'] input[type='text']"  #时间组件字段输入框
     time_label_loc = "div[title='%s']>label>span[title='%s']"  #时间组件字段名
 
-    #给时间组件输入值
+    #
     def sendkeysToTime(self,fieldName,key):
+        '''给时间组件输入值
+        fieldName：字段标题
+        key：时间值  格式：19:20
+        '''
         locator = self.time_input_loc.replace('%s',fieldName)
         self.sendkeysElemByCSS_Visibility(locator, key)
         self.clickElemByCSS_Visibility(self.time_label_loc.replace('%s',fieldName))

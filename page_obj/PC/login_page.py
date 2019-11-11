@@ -12,17 +12,12 @@ class LoginPage(SeleniumPage):
     mima = "//input[@title='请输入密码']"
     anniu = "//button[text()='登录']"
 
-    alertsuccess = "//div[@role='alert' and @class='el-message el-message--success']"
 
-
-
-
-
-
-
-    # 定义统一登录入口
     def user_login(self, username,password):
-        '''通过用户名密码登录'''
+        '''通过用户名密码登录
+        username：账号
+        password：密码
+        '''
         self.open(self.login_url)
         self.clickElemByXpath_Visibility(self.denglu)
         self.sendkeysElemByXpath_Visibility(self.zhanghao,username)

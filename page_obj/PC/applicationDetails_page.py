@@ -9,11 +9,17 @@ class ApplicationDetailsPage(SeleniumPage):
 
     #点击分组或页面
     def clickTreeItem(self,name):
-        '''点击应用页面或菜单'''
+        '''点击应用页面或菜单
+        name：分组或页面名
+        '''
+
         self.clickElemByXpath_Visibility(self.ApplicationDetailsPage_treeitem_loc.replace('%name',name))
 
-    #点击按钮
+    #
     def clickViewButton(self,buttonName):
+        '''点击列表头按钮
+        buttonName：按钮名称
+        '''
         self.clickElemByXpath_Visibility(self.ApplicationDetailsPage_viewbutton_loc.replace('%buttonName',buttonName))
 
 

@@ -16,8 +16,12 @@ class User(SeleniumPage):
 
 
 
-    # 给人员单选组件输入值
+    #
     def sendkeysToMonomialUser(self,fieldName,userName):
+        '''给人员单选组件输入值
+        fieldName：字段标题
+        userName：人员名称
+        '''
         #点击选择框
         self.clickElemByXpath_Visibility(self.user_select_loc.replace('%s',fieldName))
         self.sendkeysElemByXpath_Visibility(self.user_search_loc,userName)
@@ -25,8 +29,12 @@ class User(SeleniumPage):
         self.clickElemByXpath_Visibility(self.UserquerenButton)
 
 
-    # 给人员多选组件输入值
+
     def sendkeysToMultiUser(self,fieldName,userNameList):
+        ''' 给人员多选组件输入值
+        fieldName：字段标题
+        userNameList：人员名称集合  list类型
+        '''
         #点击选择框
         self.clickElemByXpath_Visibility(self.user_select_loc.replace('%s',fieldName))
         for name in userNameList:

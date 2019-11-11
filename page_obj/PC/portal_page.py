@@ -11,9 +11,11 @@ class PortalPage(SeleniumPage):
 
 
 
-    #点击菜单进入相应菜单页面
-    def goto_menuPage(self,menu):
 
+    def click_header_menu(self,menu):
+        '''点击工作台头部菜单
+        menu：菜单名
+        '''
         self.clickElemByXpath_Visibility(self.PortalPage_header_menu_title_loc.replace('%menu',menu))
 
 

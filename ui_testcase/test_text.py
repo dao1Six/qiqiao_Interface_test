@@ -29,7 +29,7 @@ class Text(myunit.MyTest):
         loginpage = LoginPage(self.driver)
         loginpage.user_login("wujianlun@jiekou","qiqiao123")
         portalpage = PortalPage(self.driver)
-        portalpage.goto_menuPage("应用")
+        portalpage.click_header_menu("应用")
         applicationPage = ApplicationMenuPage(self.driver)
         applicationPage.click_application_card("接口测试")
 

@@ -11,7 +11,9 @@ class ApplicationMenuPage(SeleniumPage):
     #查询应用
 
 
-    #进入应用
+
     def click_application_card(self,name):
-        #点击固定分组的应用
+        '''点击固定分组的应用
+        name:应用名称
+        '''
         self.clickElemByCSS_Visibility(self.ApplicationMenuPage_application_card_loc.replace('%name',name))
