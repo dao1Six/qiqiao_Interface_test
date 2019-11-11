@@ -8,8 +8,12 @@ class FileUpload(SeleniumPage):
     FileUpload_success_loc ="div[title='%s'] ul.file_content"  #文件上传成功标识
 
 
-    #给文件组件输入值
+
     def sendkeysToFileUpload(self,fieldName,key):
+        '''给文件组件输入值
+        fieldName：字段标题
+        key：文件路径
+        '''
         locator = self.FileUpload_Cssloc.replace('%s',fieldName)
         self.sendkeysElemByCSS_Presence(locator,key)
         #等待上传成功

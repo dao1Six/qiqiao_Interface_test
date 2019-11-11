@@ -10,6 +10,10 @@ class PicUpload(SeleniumPage):
 
     #给图片组件输入值
     def sendkeysToPicUpload(self,fieldName,key):
+        '''给文件组件输入值
+        fieldName：字段标题
+        key：图片路径
+        '''
         locator = self.PicUpload_Cssloc.replace('%s',fieldName)
         self.sendkeysElemByCSS_Presence(locator,key)
         #等待上传成功

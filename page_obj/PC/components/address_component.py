@@ -10,6 +10,11 @@ class Address(SeleniumPage):
 
     #给地址组件输入值
     def sendkeysToAddress(self,fieldName,addkeys,detilkey):
+        '''给地址组件字段输入值
+        fieldName：字段标题
+        addkeys：省市区地址  list类型
+        detilkey：详情地址信息
+        '''
         self.clickElemByXpath_Visibility(self.cascade_label_Xpath_loc.replace('%s', fieldName))
         for i in addkeys:
             self.clickElemByXpath_Visibility(self.cascade_menus_Xpath_loc.replace('%s', i))

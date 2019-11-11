@@ -20,6 +20,10 @@ class Dept(SeleniumPage):
 
     # 给部门单选组件输入值
     def sendkeysToMonomialDept(self,fieldName,DeptName):
+        ''' 给部门单选组件输入值
+        fieldName：字段标题
+        DeptName：部门名称
+        '''
         #点击选择框
         self.clickElemByXpath_Visibility(self.dept_select_loc.replace('%s',fieldName))
         self.sendkeysElemByXpath_Visibility(self.dept_search_loc,DeptName)
@@ -29,6 +33,10 @@ class Dept(SeleniumPage):
 
     # 给部门多选组件输入值
     def sendkeysToMultiDept(self,fieldName,DeptNameList):
+        ''' 给部门单选组件输入值
+        fieldName：字段标题
+        DeptNameList：部门名称集合  list类型
+        '''
         #点击选择框
         self.clickElemByXpath_Visibility(self.dept_select_loc.replace('%s',fieldName))
         for name in DeptNameList:

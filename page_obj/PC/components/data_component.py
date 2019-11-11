@@ -10,7 +10,10 @@ class Data(SeleniumPage):
 
     #给日期组件输入值
     def sendkeysToData(self,fieldName,key):
-
+        '''给日期组件输入值
+        fieldName：字段标题
+        key：日期值 格式：2018-11-22
+        '''
         self.sendkeysElemByCSS_Visibility(self.data_Cssloc.replace('%s',fieldName),key)
         self.clickElemByCSS_Visibility(self.data_label_Cssloc.replace('%s',fieldName).replace('%title',fieldName))
 
