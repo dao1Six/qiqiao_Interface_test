@@ -31,7 +31,7 @@ class Text(myunit.MyTest):
         portalpage = PortalPage(self.driver)
         portalpage.goto_menuPage("应用")
         applicationPage = ApplicationMenuPage(self.driver)
-        applicationPage.enter_application("接口测试")
+        applicationPage.click_application_card("接口测试")
 
     def tearDown(self):
         self.driver.quit()
@@ -64,8 +64,6 @@ class Text(myunit.MyTest):
         formPage.sendkeysToNumber('数字','34')
         formPage.sendkeysToTextarea('多行文本','德哈卡等哈数据库和撒撒娇撒看见哈达时候')
         formPage.submit_doc()
-
-
         time.sleep(5)
 
 

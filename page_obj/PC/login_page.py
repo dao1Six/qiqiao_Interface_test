@@ -1,4 +1,4 @@
-#登录界面
+#登录页面
 
 from page_obj.selenium_page import SeleniumPage
 

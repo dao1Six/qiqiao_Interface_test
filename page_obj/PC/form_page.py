@@ -17,8 +17,8 @@ from page_obj.PC.components.address_component import Address
 class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Selection,User,Address,Cascade):
     '''PC表单页面'''
 
-    submit_button_loc = "//button[@type='button']/span[contains(text(),'提交')]"
+    FormPage_submit_button_loc = "//button[@type='button']/span[contains(text(),'提交')]"  #表单提交按钮
 
     #提交表单
     def submit_doc(self):
-        self.clickElemByXpath_Visibility(self.submit_button_loc)
+        self.clickElemByXpath_Visibility(self.FormPage_submit_button_loc)

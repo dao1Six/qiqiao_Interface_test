@@ -4,8 +4,8 @@ from page_obj.selenium_page import SeleniumPage
 
 class FileUpload(SeleniumPage):
 
-    FileUpload_Cssloc = "div[title='%s'] input[type='file']"  # 文件上传字段Css定位
-    filesuccess_loc ="div[title='%s'] ul.file_content"
+    FileUpload_Cssloc = "div[title='%s'] input[type='file']"  # 文件上传组件输入框
+    FileUpload_success_loc ="div[title='%s'] ul.file_content"  #文件上传成功标识
 
 
     #给文件组件输入值
@@ -13,7 +13,7 @@ class FileUpload(SeleniumPage):
         locator = self.FileUpload_Cssloc.replace('%s',fieldName)
         self.sendkeysElemByCSS_Presence(locator,key)
         #等待上传成功
-        self.wait_elem_visible(self.filesuccess_loc.replace('%s',fieldName))
+        self.wait_elem_visible(self.FileUpload_success_loc.replace('%s',fieldName))
 
 
 

@@ -4,8 +4,9 @@ from page_obj.selenium_page import SeleniumPage
 
 class Data(SeleniumPage):
 
-    data_Cssloc = "div[title='%s'] input[type='text']"  # 日期组件字段Css定位
-    data_label_Cssloc = "div[title='%s']>label>span[title='%title']"
+    data_Cssloc = "div[title='%s'] input[type='text']"  # 日期组件输入框
+    data_label_Cssloc = "div[title='%s']>label>span[title='%title']"  # 日期组件字段名
+
 
     #给日期组件输入值
     def sendkeysToData(self,fieldName,key):

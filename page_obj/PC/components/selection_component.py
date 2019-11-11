@@ -11,7 +11,7 @@ class Selection(SeleniumPage):
     multiSelect_Xpathloc = "//div[text()='%s']" #下拉多选选项
     monomialSelect_loc = "//span[text()='%s']"  #下拉单选选项
 
-    RadioSelect_loc = "//div[@title='%s']//span[text()='%option']"
+    RadioSelect_loc = "//div[@title='%s']//span[text()='%option']"  #单选多选选项
 
     #下拉多选组件输入值
     def sendkeysToMultiSelect(self,fieldName,list):
