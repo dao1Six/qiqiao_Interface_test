@@ -16,6 +16,7 @@ from page_obj.PC.components.address_component import Address
 
 class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Selection,User,Address,Cascade):
     '''PC表单页面'''
+
     submit_button_loc = "//button[@type='button']/span[contains(text(),'提交')]"
 
     #提交表单

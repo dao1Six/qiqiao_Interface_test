@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bfd92873-2991-4e1d-a019-71a4f07f80c3" name="Default" comment="补充UI自动化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/address_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/address_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui_testcase/test_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_testcase/test_text.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,10 +48,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/selection_component.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui_testcase/test_text.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="341">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#13#22#0" expanded="true" />
               </folding>
@@ -61,58 +69,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/address_component.py">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="450">
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/number_component.py">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="341">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/text_component.py">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/form_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="18" column="76" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="76" />
-              <folding>
-                <element signature="e#6#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/data_component.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="325">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -120,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="75" />
+            <state relative-caret-position="166">
+              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -151,12 +129,20 @@
       <find>false</find>
       <find>数字</find>
       <find>地址</find>
+      <find>%s</find>
+      <find>@ddt</find>
+      <find>&quot;div[title='&quot;+fieldName+&quot;'] input[type='text']&quot;</find>
+      <find>&quot;//div[@title='&quot;+fieldName+&quot;']//span[text()='+选择人员']&quot;</find>
+      <find>&quot;//input[@placeholder='搜索部门']&quot;</find>
+      <find>dept_search_loc</find>
     </findStrings>
     <replaceStrings>
-      <replace />
       <replace>图片</replace>
       <replace>地址</replace>
       <replace>级联</replace>
+      <replace />
+      <replace>self</replace>
+      <replace>self.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -187,22 +173,29 @@
         <option value="$PROJECT_DIR$/page_obj/page.py" />
         <option value="$PROJECT_DIR$/pubilc/driver.py" />
         <option value="$PROJECT_DIR$/page_obj/login_page.py" />
-        <option value="$PROJECT_DIR$/ui_testcase/myunit.py" />
         <option value="$PROJECT_DIR$/interface_testcase/test_console.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/login_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/portal_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/selenium_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/data_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/time_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/datatime_component.py" />
         <option value="$PROJECT_DIR$/page_obj/selenium_page.py" />
+        <option value="$PROJECT_DIR$/ui_testcase/myunit.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/number_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/text_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/address_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/data_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/datatime_component.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/components/selection_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/textarea_components.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/time_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/user_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/portal_page.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/form_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/address_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py" />
         <option value="$PROJECT_DIR$/ui_testcase/test_text.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" />
       </list>
     </option>
   </component>
@@ -216,10 +209,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="95" />
-    <option name="y" value="524" />
-    <option name="width" value="1940" />
-    <option name="height" value="603" />
+    <option name="x" value="400" />
+    <option name="y" value="109" />
+    <option name="width" value="1417" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -229,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,36 +243,6 @@
             <path>
               <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
-              <item name="page_obj" type="462c0819:PsiDirectoryNode" />
-              <item name="PC" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
-              <item name="page_obj" type="462c0819:PsiDirectoryNode" />
-              <item name="PC" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="number_component.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
-              <item name="page_obj" type="462c0819:PsiDirectoryNode" />
-              <item name="PC" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="text_component.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
-              <item name="page_obj" type="462c0819:PsiDirectoryNode" />
-              <item name="PC" type="462c0819:PsiDirectoryNode" />
-              <item name="form_page.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
               <item name="test_report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,10 +250,15 @@
               <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
               <item name="ui_testcase" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -549,12 +516,13 @@
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="E:\SoftwareInstall\python3.7\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ui_testcase" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_pattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/ui_testcase/test_text.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -770,42 +738,56 @@
       <option name="project" value="LOCAL" />
       <updated>1573053795311</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="补充UI自动化">
+      <created>1573356920057</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573356920057</updated>
+    </task>
+    <task id="LOCAL-00023" summary="补充UI自动化">
+      <created>1573366381788</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573366381788</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_text_py - 2019.11.06 at 20h 53m 44s.xml">
+    <history-entry file="Unittests_in_test_text_py - 2019.11.09 at 10h 30m 58s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.06 at 20h 54m 18s.xml">
+    <history-entry file="Unittests_in_test_text_py - 2019.11.09 at 15h 23m 12s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.06 at 20h 54m 30s.xml">
+    <history-entry file="Unittests_for_test_text_Text_test_01 - 2019.11.10 at 16h 52m 27s.xml">
+      <configuration name="Unittests for test_text.Text.test_01" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_text_Text_test_01 - 2019.11.10 at 16h 53m 42s.xml">
+      <configuration name="Unittests for test_text.Text.test_01" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_text_Text_test_01 - 2019.11.10 at 16h 54m 55s.xml">
+      <configuration name="Unittests for test_text.Text.test_01" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 16h 58m 57s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 02m 24s.xml">
+    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 01m 59s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 03m 35s.xml">
+    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 04m 29s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 07m 00s.xml">
+    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 13m 45s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 17m 58s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 20m 03s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 29m 40s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.07 at 21h 30m 33s.xml">
+    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 15m 31s.xml">
       <configuration name="Unittests in test_text.py" configurationId="tests" />
     </history-entry>
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -818,22 +800,22 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20179136" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14646997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32921812" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.39479393" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.1670282" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.43167028" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40130153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32992327" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32934928" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.47128928" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49967042" weight="0.31841433" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286445" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49967042" weight="0.3177874" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286334" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -901,8 +883,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py</url>
-          <line>11</line>
+          <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ui_testcase/test_text.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -914,6 +901,31 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>self.filesuccess_loc.replace('%s',fieldName)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.success_loc</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.success_loc.replace('%s',fieldName)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.loc</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>loc</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>elem.send_keys('A / a')</expression-string>
         <language-id>Python</language-id>
@@ -931,38 +943,6 @@
       </expression>
       <expression>
         <expression-string>os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.abspath(os.path.dirname(__file__))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>import os
-
-os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>root_path</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.find_elemByCSS(locator).send_keys('G:\\python_workspace\\wujianlunTestTeam\\qiqiao_Interface_test\\file_data\\pic.jpeg')</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.find_elemByCSS(locator).send_keys('G:\\python_workspace\\wujianlunTestTeam\\file_data\\qiqiao_Interface_test\\pic.jpeg')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -1021,13 +1001,6 @@ os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</ex
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_report/result.html" />
-    <entry file="file://D:/Software/python/Lib/HTMLTestRunner.py" />
-    <entry file="file://$PROJECT_DIR$/testcase/test_website.py" />
-    <entry file="file://D:/Software/python/Lib/site-packages/requests/api.py" />
-    <entry file="file://$PROJECT_DIR$/对对对.txt" />
-    <entry file="file://D:/Software/python/Lib/unittest/case.py" />
-    <entry file="file://$PROJECT_DIR$/pubilc/BasePage.py" />
     <entry file="file://F:/SoftwareInstall/python3.7/Lib/unittest/case.py" />
     <entry file="file://F:/SoftwareInstall/python3.7/Lib/unittest/suite.py" />
     <entry file="file://$PROJECT_DIR$/test_report/test_report.html">
@@ -1077,66 +1050,11 @@ os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</ex
     <entry file="file://$PROJECT_DIR$/page_obj/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui_testcase/myunit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/SoftwareInstall/python3.7/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="623" selection-start-line="623" selection-end-line="623" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="16" column="103" selection-start-line="16" selection-start-column="103" selection-end-line="16" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page_obj/PC/selenium_page.py" />
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/portal_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="626" selection-start-line="626" selection-end-line="626" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/time_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/textarea_components.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/datatime_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -1160,20 +1078,6 @@ os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</ex
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/selection_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -1214,9 +1118,6 @@ os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</ex
     <entry file="file://$PROJECT_DIR$/util/codeController.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/runAll.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1237,68 +1138,204 @@ os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]</ex
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
+    <entry file="file://$PROJECT_DIR$/ui_testcase/myunit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="236" column="8" selection-start-line="236" selection-start-column="8" selection-end-line="236" selection-end-column="75" />
+        <state relative-caret-position="50">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/SoftwareInstall/python3.7/Lib/http/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="1245" column="17" selection-start-line="1245" selection-start-column="12" selection-end-line="1245" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/number_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/text_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="81" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/address_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/data_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="113" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/datatime_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/textarea_components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/time_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/user_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_obj/PC/form_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="18" column="76" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="76" />
+        <state relative-caret-position="450">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#6#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/data_component.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="400">
+          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/login_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" selection-start-line="8" selection-end-line="10" selection-end-column="123" />
+        <state relative-caret-position="518">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="21" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/address_component.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/portal_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="400">
+          <caret line="16" column="88" selection-start-line="16" selection-start-column="88" selection-end-line="16" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/SoftwareInstall/python3.7/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="627" selection-start-line="627" selection-end-line="627" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/selection_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/messages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="166" selection-start-line="166" selection-end-line="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_runner_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui_testcase/test_text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="341">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#13#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/number_component.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="166">
+          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/text_component.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="341">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
