@@ -20,5 +20,5 @@ class FormPage(Number,Text,Textarea,Data,Time,DataTime,PicUpload,FileUpload,Sele
     FormPage_submit_button_loc = "//button[@type='button']/span[contains(text(),'提交')]"  #表单提交按钮
 
     #提交表单
-    def submit_doc(self):
+    def click_submit_button(self,*args):
         self.clickElemByXpath_Visibility(self.FormPage_submit_button_loc)

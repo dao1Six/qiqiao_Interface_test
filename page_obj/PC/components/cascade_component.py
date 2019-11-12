@@ -9,7 +9,7 @@ class Cascade(SeleniumPage):
     cascade_menus_Xpath_loc = "//div[@class='el-cascader-menus el-popper']//span[contains(text(),'%s')]"  # 级联选择组件选项
 
     #输入级联组件的值
-    def sendkeysToCascade(self,fieldName,optionsList):
+    def sendkeysToCascade(self,fieldName,optionsList,*args):
         '''输入级联组件的值
         fieldName：字段标题
         optionsList：级联选项  list类型

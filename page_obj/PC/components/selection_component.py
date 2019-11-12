@@ -14,7 +14,7 @@ class Selection(SeleniumPage):
     RadioSelect_loc = "//div[@title='%s']//span[text()='%option']"  #单选多选选项
 
     #
-    def sendkeysToMultiSelect(self,fieldName,list):
+    def sendkeysToMultiSelect(self,fieldName,list,*args):
         '''下拉多选组件输入值
         fieldName：字段标题
         list：下拉选项 list类型
@@ -25,7 +25,7 @@ class Selection(SeleniumPage):
             self.clickElemByXpath_Visibility(self.multiSelect_Xpathloc.replace('%s',i))
 
     #
-    def sendkeysToMonomialSelect(self,fieldName,option):
+    def sendkeysToMonomialSelect(self,fieldName,option,*args):
         '''下拉单选组件输入值
         fieldName：字段标题
         option：下拉选项
@@ -35,7 +35,7 @@ class Selection(SeleniumPage):
         self.clickElemByXpath_Visibility(self.monomialSelect_loc.replace('%s',option))
 
     #
-    def sendkeysToRadioSelect(self,fieldName,option):
+    def sendkeysToRadioSelect(self,fieldName,option,*args):
         '''给单项选择组件输入值
         fieldName：字段标题
         option：单项选项
@@ -44,7 +44,7 @@ class Selection(SeleniumPage):
 
 
     #
-    def sendkeysToCheckboxSelect(self,fieldName,list):
+    def sendkeysToCheckboxSelect(self,fieldName,list,*args):
         '''给多项选择组件输入值
         fieldName：字段标题
         list：多项选项 list类型

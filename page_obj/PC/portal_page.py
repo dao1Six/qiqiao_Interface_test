@@ -12,7 +12,7 @@ class PortalPage(SeleniumPage):
 
 
 
-    def click_header_menu(self,menu):
+    def click_header_menu(self,menu,*args):
         '''点击工作台头部菜单
         menu：菜单名
         '''

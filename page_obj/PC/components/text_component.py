@@ -8,7 +8,7 @@ class Text(SeleniumPage):
     text_Cssloc = "div[title='%s'] input[type='text']"  #单行文本组件字段Css定位
 
     #
-    def sendkeysToText(self,fieldName,key):
+    def sendkeysToText(self,fieldName,key,*args):
         '''给单行文本组件输入值
         fieldName：字段标题
         key：文本值

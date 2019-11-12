@@ -32,7 +32,7 @@ class Dept(SeleniumPage):
 
 
     # 给部门多选组件输入值
-    def sendkeysToMultiDept(self,fieldName,DeptNameList):
+    def sendkeysToMultiDept(self,fieldName,DeptNameList,*args):
         ''' 给部门单选组件输入值
         fieldName：字段标题
         DeptNameList：部门名称集合  list类型

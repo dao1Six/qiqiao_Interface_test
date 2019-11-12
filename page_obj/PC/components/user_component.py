@@ -30,7 +30,7 @@ class User(SeleniumPage):
 
 
 
-    def sendkeysToMultiUser(self,fieldName,userNameList):
+    def sendkeysToMultiUser(self,fieldName,userNameList,*args):
         ''' 给人员多选组件输入值
         fieldName：字段标题
         userNameList：人员名称集合  list类型

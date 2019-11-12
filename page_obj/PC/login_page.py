@@ -13,7 +13,7 @@ class LoginPage(SeleniumPage):
     anniu = "//button[text()='登录']"
 
 
-    def user_login(self, username,password):
+    def user_login(self, username,password,*args):
         '''通过用户名密码登录
         username：账号
         password：密码

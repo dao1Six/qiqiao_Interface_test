@@ -16,7 +16,7 @@ from page_obj.selenium_page import SeleniumPage
 from reportRunner import Report
 from ui_testcase import myunit
 
-@ddt
+# @ddt
 class Text(myunit.MyTest):
 
     project_path = os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]+'\\qiqiao_Interface_test'
@@ -31,7 +31,7 @@ class Text(myunit.MyTest):
         portalpage = PortalPage(self.driver)
         portalpage.click_header_menu("应用")
         applicationPage = ApplicationMenuPage(self.driver)
-        applicationPage.click_application_card("接口测试")
+        applicationPage.click_application_card('固定分组',"接口测试")
 
     def tearDown(self):
         self.driver.quit()
@@ -63,7 +63,8 @@ class Text(myunit.MyTest):
         formPage.sendkeysToText('单行文本','dfsfsd')
         formPage.sendkeysToNumber('数字','34')
         formPage.sendkeysToTextarea('多行文本','德哈卡等哈数据库和撒撒娇撒看见哈达时候')
-        formPage.submit_doc()
+        formPage.click_submit_button()
+
         time.sleep(5)
 
 
