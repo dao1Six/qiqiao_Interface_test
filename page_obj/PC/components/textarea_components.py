@@ -4,7 +4,8 @@ from page_obj.selenium_page import SeleniumPage
 
 
 class Textarea(SeleniumPage):
-    textarea_input_loc = "div[title='%s'] textarea.el-textarea__inner"  #多行文本组件字段输入框
+
+    Textarea_input_loc = "div[title='%s'] textarea.el-textarea__inner"  #多行文本组件字段输入框
 
     #
     def sendkeysToTextarea(self,fieldName,key,*args):
@@ -12,6 +13,6 @@ class Textarea(SeleniumPage):
         fieldName：字段标题
         key：文本值
         '''
-        self.sendkeysElemByCSS_Visibility(self.textarea_input_loc.replace('%s',fieldName),key)
+        self.sendkeysElemByCSS_Visibility(self.Textarea_input_loc.replace('%s',fieldName),key)
 
 

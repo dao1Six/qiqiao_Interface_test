@@ -7,7 +7,7 @@ class PortalPage(SeleniumPage):
     '''工作台页面'''
 
     #Action
-    PortalPage_header_menu_title_loc = "//a[@class='header_menu_title' and text()='%menu']"  #工作台顶部菜单栏菜单
+    PortalPage_headerMenu_loc = "//a[@class='header_menu_title' and text()='%menu']"  #工作台顶部菜单栏菜单
 
 
 
@@ -16,7 +16,7 @@ class PortalPage(SeleniumPage):
         '''点击工作台头部菜单
         menu：菜单名
         '''
-        self.clickElemByXpath_Visibility(self.PortalPage_header_menu_title_loc.replace('%menu',menu))
+        self.clickElemByXpath_Visibility(self.PortalPage_headerMenu_loc.replace('%menu',menu))
 
 
 

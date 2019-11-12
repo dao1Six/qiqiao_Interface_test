@@ -8,7 +8,7 @@ from ddt import ddt, data, unpack
 
 
 from page_obj.PC.applicationDetails_page import ApplicationDetailsPage
-from page_obj.PC.applicationMenu_page import ApplicationMenuPage
+from page_obj.PC.applicationList_page import ApplicationListPage
 from page_obj.PC.form_page import FormPage
 from page_obj.PC.login_page import LoginPage
 from page_obj.PC.portal_page import PortalPage
@@ -30,8 +30,8 @@ class Text(myunit.MyTest):
         loginpage.user_login("wujianlun@jiekou","qiqiao123")
         portalpage = PortalPage(self.driver)
         portalpage.click_header_menu("应用")
-        applicationPage = ApplicationMenuPage(self.driver)
-        applicationPage.click_application_card('固定分组',"接口测试")
+        applicationPage = ApplicationListPage(self.driver)
+        applicationPage.click_application('固定分组',"接口测试")
 
     def tearDown(self):
         self.driver.quit()

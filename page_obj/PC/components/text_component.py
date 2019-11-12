@@ -5,7 +5,7 @@ from page_obj.selenium_page import SeleniumPage
 class Text(SeleniumPage):
 
 
-    text_Cssloc = "div[title='%s'] input[type='text']"  #单行文本组件字段Css定位
+    Text_input_loc = "div[title='%s'] input[type='text']"  #单行文本组件字段输入框
 
     #
     def sendkeysToText(self,fieldName,key,*args):
@@ -13,6 +13,6 @@ class Text(SeleniumPage):
         fieldName：字段标题
         key：文本值
         '''
-        self.sendkeysElemByCSS_Visibility(self.text_Cssloc.replace('%s',fieldName), key)
+        self.sendkeysElemByCSS_Visibility(self.Text_input_loc.replace('%s',fieldName), key)
 
 

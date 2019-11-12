@@ -4,9 +4,9 @@ from page_obj.selenium_page import SeleniumPage
 
 class Cascade(SeleniumPage):
 
-    cascade_label_Xpath_loc = "//div[@title='%s']//span[@class='el-cascader__label']"  # 级联选择组件字段名
+    Cascade_selectionBox_loc = "//div[@title='%s']//span[@class='el-cascader__label']"  # 级联组件字段选择下拉框
 
-    cascade_menus_Xpath_loc = "//div[@class='el-cascader-menus el-popper']//span[contains(text(),'%s')]"  # 级联选择组件选项
+    Cascade_selecOption_loc = "//div[@class='el-cascader-menus el-popper']//span[contains(text(),'%s')]"  # 级联选择组件字段选项
 
     #输入级联组件的值
     def sendkeysToCascade(self,fieldName,optionsList,*args):
@@ -14,8 +14,8 @@ class Cascade(SeleniumPage):
         fieldName：字段标题
         optionsList：级联选项  list类型
         '''
-        self.clickElemByXpath_Visibility(self.cascade_label_Xpath_loc.replace('%s', fieldName))
+        self.clickElemByXpath_Visibility(self.Cascade_selectionBox_loc.replace('%s', fieldName))
         for i in optionsList:
-            self.clickElemByXpath_Visibility(self.cascade_menus_Xpath_loc.replace('%s', i))
+            self.clickElemByXpath_Visibility(self.Cascade_selecOption_loc.replace('%s', i))
 
     #给级联组件输入值

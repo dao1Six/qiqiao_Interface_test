@@ -4,9 +4,9 @@ from page_obj.selenium_page import SeleniumPage
 
 class Address(SeleniumPage):
 
-    cascade_label_Xpath_loc = "//div[@title='%s']//span[@class='el-cascader__label']"  #地址组件字段名
-    cascade_menus_Xpath_loc = "//div[@class='el-cascader-menus el-popper']//span[contains(text(),'%s')]"  #地址组件选项
-    address_detil_Xpath_loc = "//div[@title='%s']//input[@placeholder='详细地址']"  #地址组件详情输入框
+    Address_selectionBox_loc = "//div[@title='%s']//span[@class='el-cascader__label']"  #地址组件字段选择下拉框
+    Address_selecOption_loc = "//div[@class='el-cascader-menus el-popper']//span[contains(text(),'%s')]"  #地址组件字段选项
+    Address_detilInput_loc = "//div[@title='%s']//input[@placeholder='详细地址']"  #地址组件字段地址详情输入框
 
     #给地址组件输入值
     def sendkeysToAddress(self,fieldName,addkeys,detilkey,*args):
@@ -15,8 +15,8 @@ class Address(SeleniumPage):
         addkeys：省市区地址  list类型
         detilkey：详情地址信息
         '''
-        self.clickElemByXpath_Visibility(self.cascade_label_Xpath_loc.replace('%s', fieldName))
+        self.clickElemByXpath_Visibility(self.Address_selectionBox_loc.replace('%s', fieldName))
         for i in addkeys:
-            self.clickElemByXpath_Visibility(self.cascade_menus_Xpath_loc.replace('%s', i))
-        self.sendkeysElemByXpath_Visibility(self.address_detil_Xpath_loc.replace('%s', fieldName),detilkey)
+            self.clickElemByXpath_Visibility(self.Address_selecOption_loc.replace('%s', i))
+        self.sendkeysElemByXpath_Visibility(self.Address_detilInput_loc.replace('%s', fieldName),detilkey)
 

@@ -4,8 +4,8 @@ from page_obj.selenium_page import SeleniumPage
 
 class DataTime(SeleniumPage):
 
-    data_Cssloc = "div[title='%s'] input[type='text']"  # 日期时间组件输入框
-    data_label_Cssloc = "div[title='%s']>label>span[title='%title']"   # 日期时间组件字段名
+    DataTime_input_loc = "div[title='%s'] input[type='text']"  # 日期时间组件输入框
+    DataTime_label_loc = "div[title='%s']>label>span[title='%title']"   # 日期时间组件字段标题
 
     #给日期时间组件输入值
     def sendkeysToDataTime(self,fieldName,datakey,timekey,*args):
@@ -14,12 +14,12 @@ class DataTime(SeleniumPage):
         datakey：日期值 格式：2018-11-22
         timekey：时间值 格式：19:20
         '''
-        locator = self.data_Cssloc.replace('%s',fieldName)
+        locator = self.DataTime_input_loc.replace('%s',fieldName)
         dataElem = self.find_elemsByCSS(locator)[0]
         timeElem = self.find_elemsByCSS(locator)[1]
         dataElem.send_keys(datakey)
         timeElem.send_keys(timekey)
-        self.clickElemByCSS_Visibility(self.data_label_Cssloc.replace('%s',fieldName).replace('%title',fieldName))
+        self.clickElemByCSS_Visibility(self.DataTime_label_loc.replace('%s',fieldName).replace('%title',fieldName))
 
 
     #获取日期组件的值

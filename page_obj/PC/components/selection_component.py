@@ -6,12 +6,13 @@ from page_obj.selenium_page import SeleniumPage
 
 class Selection(SeleniumPage):
 
-    selection_input_Cssloc = "div[title='%s'] input[type='text']"  #下拉单选和多选的输入框
+    Selection_selectionBox_loc = "div[title='%s'] input[type='text']"  #下拉选择组件下拉框
 
-    multiSelect_Xpathloc = "//div[text()='%s']" #下拉多选选项
-    monomialSelect_loc = "//span[text()='%s']"  #下拉单选选项
+    Selection_multiSelectOption_loc = "//div[text()='%s']" #下拉多选选项
 
-    RadioSelect_loc = "//div[@title='%s']//span[text()='%option']"  #单选多选选项
+    Selection_monomialSelectOption_loc = "//span[text()='%s']"  #下拉单选选项
+
+    Selection_Option_loc = "//div[@title='%s']//span[text()='%option']"  #单选多选选项
 
     #
     def sendkeysToMultiSelect(self,fieldName,list,*args):
@@ -19,10 +20,10 @@ class Selection(SeleniumPage):
         fieldName：字段标题
         list：下拉选项 list类型
         '''
-        loc = self.selection_input_Cssloc.replace('%s',fieldName)
+        loc = self.Selection_selectionBox_loc.replace('%s',fieldName)
         self.clickElemByCSS_Visibility(loc)
         for i in list:
-            self.clickElemByXpath_Visibility(self.multiSelect_Xpathloc.replace('%s',i))
+            self.clickElemByXpath_Visibility(self.Selection_multiSelectOption_loc.replace('%s',i))
 
     #
     def sendkeysToMonomialSelect(self,fieldName,option,*args):
@@ -30,9 +31,9 @@ class Selection(SeleniumPage):
         fieldName：字段标题
         option：下拉选项
         '''
-        loc = self.selection_input_Cssloc.replace('%s',fieldName)
+        loc = self.Selection_selectionBox_loc.replace('%s',fieldName)
         self.clickElemByCSS_Visibility (loc)
-        self.clickElemByXpath_Visibility(self.monomialSelect_loc.replace('%s',option))
+        self.clickElemByXpath_Visibility(self.Selection_monomialSelectOption_loc.replace('%s',option))
 
     #
     def sendkeysToRadioSelect(self,fieldName,option,*args):
@@ -40,7 +41,7 @@ class Selection(SeleniumPage):
         fieldName：字段标题
         option：单项选项
         '''
-        self.clickElemByXpath_Visibility (self.RadioSelect_loc.replace('%s',fieldName).replace('%option',option))
+        self.clickElemByXpath_Visibility (self.Selection_Option_loc.replace('%s',fieldName).replace('%option',option))
 
 
     #
@@ -50,4 +51,4 @@ class Selection(SeleniumPage):
         list：多项选项 list类型
         '''
         for i in list:
-            self.clickElemByXpath_Visibility(self.RadioSelect_loc.replace('%s',fieldName).replace('%option',i))
+            self.clickElemByXpath_Visibility(self.Selection_Option_loc.replace('%s',fieldName).replace('%option',i))
