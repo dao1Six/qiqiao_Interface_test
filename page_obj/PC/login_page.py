@@ -6,7 +6,7 @@ from page_obj.selenium_page import SeleniumPage
 class LoginPage(SeleniumPage):
     '''登录界面'''
 
-    login_url = 'https://qy.do1.com.cn/qiqiao/runtime'
+    login_url = 'https://tqy.do1.net.cn/dev-runtime/'
     denglu = "//a[text()='账号密码登录']"
     zhanghao = "//input[@title='请输入账号']"
     mima = "//input[@title='请输入密码']"

@@ -27,11 +27,11 @@ class Text(myunit.MyTest):
         #先登录1
         seleniumPage = SeleniumPage(self.driver)
         loginpage = LoginPage(self.driver)
-        loginpage.user_login("wujianlun@jiekou","qiqiao123")
+        loginpage.user_login("liuyan@A","qiqiao123")
         portalpage = PortalPage(self.driver)
         portalpage.click_header_menu("应用")
         applicationPage = ApplicationListPage(self.driver)
-        applicationPage.click_application('固定分组',"接口测试")
+        applicationPage.click_application('默认分组',"接口测试")
 
     def tearDown(self):
         self.driver.quit()
