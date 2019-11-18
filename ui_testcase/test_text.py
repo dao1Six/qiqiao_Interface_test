@@ -27,7 +27,7 @@ class Text(myunit.MyTest):
         #先登录1
         seleniumPage = SeleniumPage(self.driver)
         loginpage = LoginPage(self.driver)
-        loginpage.user_login("liuyan@A","qiqiao123")
+        loginpage.user_login('https://qy.do1.com.cn/qiqiao/runtime',"liuyan@A","qiqiao123")
         portalpage = PortalPage(self.driver)
         portalpage.click_header_menu("应用")
         applicationPage = ApplicationListPage(self.driver)
