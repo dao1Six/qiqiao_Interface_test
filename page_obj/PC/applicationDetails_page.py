@@ -3,10 +3,6 @@ from page_obj.selenium_page import SeleniumPage
 
 class ApplicationDetailsPage(SeleniumPage):
 
-    # ApplicationDetailsPage_treeitem_loc = "//div[@role='treeitem']/*/span[@title='%name']"  #左侧分组或页面元素
-
-    # ApplicationDetailsPage_viewbutton_loc = "//button[@type='button']/span[text()='%buttonName']"  #列表按钮
-
 
     ApplicationDetailsPage_treeitem_loc = "[data-mark=%applicationName] [data-mark=%menuName]" #左侧分组或页面元素
 
@@ -28,6 +24,11 @@ class ApplicationDetailsPage(SeleniumPage):
         buttonName：按钮名称
         '''
         self.clickElemByCSS_Visibility(self.ApplicationDetailsPage_viewbutton_loc.replace('%btnName',buttonName))
+
+    def get_viewList_CellValue(self,*args):
+        '''获取列表某个单元格的值'''
+        pass
+
 
 
     #查询
