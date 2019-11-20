@@ -24,7 +24,7 @@ class JinXiaoCun(unittest.TestCase):
     def test_1_addPro_record(self):
         '''应用管理员录入商品信息'''
         loginpage = LoginPage (self.driver)
-        loginpage.user_login ('https://qy.do1.com.cn/qiqiao/runtime', "liuyan@A", "qiqiao123")
+        loginpage.user_login ('https://tqy.do1.net.cn/dev-runtime/', "liuyan@A", "qiqiao123")
         portalpage = PortalPage (self.driver)
         portalpage.click_header_menu ("应用")
         applicationPage = ApplicationListPage (self.driver)
@@ -42,5 +42,37 @@ class JinXiaoCun(unittest.TestCase):
 
     def test_2_addSupplier_record(self):
         '''应用管理员录入供应商信息'''
+        loginpage = LoginPage (self.driver)
+        loginpage.user_login ('https://tqy.do1.net.cn/dev-runtime/', "liuyan@A", "qiqiao123")
+        portalpage = PortalPage (self.driver)
+        portalpage.click_header_menu ("应用")
+        applicationPage = ApplicationListPage (self.driver)
+        applicationPage.click_application ('默认分组', "进销存")
+        applicationDetailPage = ApplicationDetailsPage (self.driver)
+        applicationDetailPage.clickTreeItem('进销存','基础信息')
+        applicationDetailPage.clickTreeItem ('进销存', '供应商管理')
+        applicationDetailPage.clickViewButton('添加')
+        formPage = FormPage (self.driver)
+        formPage.sendkeysToText ('供应商名称', '')
+        #点击子表添加按钮
+        formPage.click_ChildForm_AddButton()
+
+
+    def test_3_addCustomer_record(self):
+        '''应用管理员录入客户信息'''
+        loginpage = LoginPage (self.driver)
+        loginpage.user_login ('https://tqy.do1.net.cn/dev-runtime/', "liuyan@A", "qiqiao123")
+        portalpage = PortalPage (self.driver)
+        portalpage.click_header_menu ("应用")
+        applicationPage = ApplicationListPage (self.driver)
+        applicationPage.click_application ('默认分组', "进销存")
+        applicationDetailPage = ApplicationDetailsPage (self.driver)
+        applicationDetailPage.clickTreeItem('进销存','基础信息')
+        applicationDetailPage.clickTreeItem ('进销存', '供应商管理')
+        applicationDetailPage.clickViewButton('添加')
+        formPage = FormPage (self.driver)
+        formPage.sendkeysToText ('供应商名称', '')
+        #点击子表添加按钮
+        formPage.click_ChildForm_AddButton()
 
 

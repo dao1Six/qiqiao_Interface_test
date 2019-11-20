@@ -8,6 +8,10 @@ class ApplicationDetailsPage(SeleniumPage):
 
     ApplicationDetailsPage_viewbutton_loc = '[data-mark=%btnName] button'
 
+    ApplicationDetailsPage_Tab_loc = ''
+
+
+
 
 
     #点击分组或页面
@@ -30,5 +34,10 @@ class ApplicationDetailsPage(SeleniumPage):
         pass
 
 
+    #点击查询按钮
 
-    #查询
+    #点击重置按钮
+
+    #切换选项卡
+
+    #
