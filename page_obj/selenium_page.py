@@ -211,41 +211,66 @@ class SeleniumPage(object):
         except TimeoutException:
             print('元素一直可见')
 
-####新方法
-
-
+####点击元素方法
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByXpath_Visibility(self, locator, timeout=2):
+        '''点击单个可见元素Xpath'''
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.click()
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByXpath_Presence(self, locator, timeout=2):
-        print("try....")
+        '''点击单个存在dom的元素Xpath'''
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.click()
 
 
-
-
-
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByCSS_Visibility(self, locator, timeout=2):
+        '''点击单个可见元素CSS'''
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.click()
+
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
+    def clickElemByCSS_Presence(self, locator, timeout=2):
+        '''点击单个存在dom的元素CSS'''
+        elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.click()
 
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
+    def clickElemsByCSS_Visibility(self, locator, num=0,timeout=2):
+        '''点击可见元素组里的某个元素CSS'''
+        elems = WebDriverWait(self.driver, timeout).until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+        elems[num].click()
+
+
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
+    def clickElemsByCSS_Presence(self, locator,num=0,timeout=2):
+        '''点击存在dom里的元素组里的某个元素CSS'''
+        elems = WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+        elems[num].click()
+
+####元素写值方法
+
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByXpath_Visibility(self, locator,key, timeout=2):
+        '''给一个可见元素写入值Xpath'''
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
 
+
+
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByXpath_Presence(self, locator,key, timeout=2):
+        '''给一个存在dom的元素写入值Xpath'''
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.XPATH, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
@@ -253,17 +278,34 @@ class SeleniumPage(object):
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByCSS_Visibility(self, locator,key, timeout=2):
+        '''给一个可见元素写入值CSS'''
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
+    def sendkeysElemsByCSS_Visibility(self, locator,key,num=0, timeout=2):
+        '''给可见的元素组里的某个元素写入值CSS'''
+        elems = WebDriverWait(self.driver, timeout).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+        elems[num].send_keys(key)
+
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemByCSS_Presence(self, locator,key, timeout=2):
+        '''给存在dom里的元素组里的某个元素写入值CSS'''
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.send_keys(key)
 
+    @retry(stop_max_attempt_number=5,wait_fixed = 2000)
+    def sendkeysElemsByCSS_Presence(self, locator,key,num=0,timeout=2):
+        '''给存在dom里的元素组里的某个元素写入值CSS'''
+        elems = WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+        elems[num].send_keys(key)
 
+##################
+    # 查找元素方法
     def find_elemByCSS(self, locator, timeout=5):
         '''判断5s内，定位的元素是否存在dom结构里。存在则返回元素，不存在则返回None'''
         try:

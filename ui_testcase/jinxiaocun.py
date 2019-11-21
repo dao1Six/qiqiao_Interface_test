@@ -1,3 +1,5 @@
+import os
+import time
 import unittest
 
 from page_obj.PC.applicationDetails_page import ApplicationDetailsPage
@@ -10,14 +12,18 @@ from pubilc.driver import pcdriver
 
 class JinXiaoCun(unittest.TestCase):
 
+
+    project_path = os.path.abspath(os.path.dirname(__file__)).split('qiqiao_Interface_test')[0]+'\\qiqiao_Interface_test'
+
+
     @classmethod
     def setUpClass(cls):
         cls.driver = pcdriver()
         cls.driver.maximize_window()
 
 
-    @classmethod
-    def tearDownClass(cls):
+
+    def tearDown(cls):
         cls.driver.quit()
 
 
@@ -30,12 +36,16 @@ class JinXiaoCun(unittest.TestCase):
         applicationPage = ApplicationListPage (self.driver)
         applicationPage.click_application ('默认分组', "进销存")
         applicationDetailPage = ApplicationDetailsPage (self.driver)
-        applicationDetailPage.clickTreeItem('进销存','基础信息')
-        applicationDetailPage.clickTreeItem ('进销存', '产品管理')
+        applicationDetailPage.clickTreeItem('基础信息')
+        applicationDetailPage.clickTreeItem ('产品管理')
         applicationDetailPage.clickViewButton('添加')
         formPage = FormPage(self.driver)
-        formPage.sendkeysToText('产品名称','')
-
+        formPage.sendkeysToText('产品名称','榴莲')
+        formPage.sendkeysToPicUpload('产品图片',self.project_path+'\\file_data\\pic.jpeg')
+        formPage.sendkeysToTextarea('产品描述','的哈加达还是觉得哈师大库哈斯打赏')
+        formPage.sendkeysToNumber('建议采购价',80)
+        formPage.sendkeysToNumber ('建议销售价', 80)
+        formPage.click_submit_button()
         applicationDetailPage.get_viewList_CellValue()
 
 
@@ -49,13 +59,21 @@ class JinXiaoCun(unittest.TestCase):
         applicationPage = ApplicationListPage (self.driver)
         applicationPage.click_application ('默认分组', "进销存")
         applicationDetailPage = ApplicationDetailsPage (self.driver)
-        applicationDetailPage.clickTreeItem('进销存','基础信息')
-        applicationDetailPage.clickTreeItem ('进销存', '供应商管理')
+        applicationDetailPage.clickTreeItem('基础信息')
+        applicationDetailPage.clickTreeItem ('供应商管理')
         applicationDetailPage.clickViewButton('添加')
         formPage = FormPage (self.driver)
         formPage.sendkeysToText ('供应商名称', '')
         #点击子表添加按钮
-        formPage.click_ChildForm_AddButton()
+        formPage.click_ChildForm_AddButton('联系人')
+        formPage.sendkeys_To_ChildFormText('联系人',1,'姓名','刘能')
+        formPage.sendkeys_To_ChildSelect('联系人',1,'性别',['女'])
+        #点击子表添加按钮
+        formPage.click_ChildForm_AddButton('联系人')
+        formPage.sendkeys_To_ChildFormText('联系人',2,'姓名','刘能')
+        formPage.sendkeys_To_ChildSelect('联系人',2,'性别',['女'])
+        time.sleep(10)
+
 
 
     def test_3_addCustomer_record(self):
@@ -65,14 +83,21 @@ class JinXiaoCun(unittest.TestCase):
         portalpage = PortalPage (self.driver)
         portalpage.click_header_menu ("应用")
         applicationPage = ApplicationListPage (self.driver)
-        applicationPage.click_application ('默认分组', "进销存")
+        applicationPage.click_application ('杨李杰的分组', "1.01")
         applicationDetailPage = ApplicationDetailsPage (self.driver)
-        applicationDetailPage.clickTreeItem('进销存','基础信息')
-        applicationDetailPage.clickTreeItem ('进销存', '供应商管理')
+        applicationDetailPage.clickTreeItem('关联组件')
+        applicationDetailPage.clickTreeItem ('子表组件')
         applicationDetailPage.clickViewButton('添加')
         formPage = FormPage (self.driver)
-        formPage.sendkeysToText ('供应商名称', '')
         #点击子表添加按钮
-        formPage.click_ChildForm_AddButton()
+        formPage.click_ChildForm_AddButton('子表单组件')
+        formPage.sendkeys_To_ChildSelect('子表单组件',1,'单选',['java'])
+        formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '下拉', ['足球'])
+        # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '多选', ['苹果','华为'])
+        formPage.sendkeys_To_ChildPicUpload('子表单组件', '图片上传',1, self.project_path+'\\file_data\\pic.jpeg')
+        formPage.sendkeys_To_ChildFormDate('子表单组件','日期',1,'2018-11-22')
+        formPage.sendkeys_To_ChildFormTime ('子表单组件', '时间', 1,'19:20')
+        formPage.sendkeys_To_ChildFormDateTime ('子表单组件', '日期时间', 1,'2018-11-22','19:20')
+        time.sleep(30)
 
 

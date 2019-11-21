@@ -4,23 +4,23 @@ from page_obj.selenium_page import SeleniumPage
 class ApplicationDetailsPage(SeleniumPage):
 
 
-    ApplicationDetailsPage_treeitem_loc = "[data-mark=%applicationName] [data-mark=%menuName]" #左侧分组或页面元素
+    ApplicationDetailsPage_treeitem_loc = "[data-mark=left_bar_%menuName]" #左侧分组或页面元素
 
     ApplicationDetailsPage_viewbutton_loc = '[data-mark=%btnName] button'
 
-    ApplicationDetailsPage_Tab_loc = ''
+    ApplicationDetailsPage_ViewListCell_loc = ''  #列表单元格
 
 
 
 
 
     #点击分组或页面
-    def clickTreeItem(self,applicationName,menuName,*args):
+    def clickTreeItem(self,menuName,*args):
         '''点击应用页面或菜单
         name：分组或页面名
         '''
 
-        self.clickElemByCSS_Visibility(self.ApplicationDetailsPage_treeitem_loc.replace('%applicationName',applicationName).replace('%menuName',menuName))
+        self.clickElemByCSS_Presence(self.ApplicationDetailsPage_treeitem_loc.replace('%menuName',menuName))
 
     #
     def clickViewButton(self,buttonName,*args):
