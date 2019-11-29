@@ -3,11 +3,12 @@ from page_obj.selenium_page import SeleniumPage
 
 
 class MultiFormAssociation(SeleniumPage):
+    MultiFormAssociation_HandleManagerButton_loc = "[data-mark=%title] [data-mark=button_批量管理]" #批量管理按钮
 
 
-    def click_MultiFormAssociation_HandleManagerButton(self,*args):
+    def click_MultiFormAssociation_HandleManagerButton(self,fileName,*args):
         '''点击批量管理按钮'''
-        pass
+        self.clickElemByCSS_Presence(self.MultiFormAssociation_HandleManagerButton_loc.replace('%title',fileName))
 
 
     def click_MultiFormAssociation_AddButton(self,*args):

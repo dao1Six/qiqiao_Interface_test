@@ -10,7 +10,9 @@ class ChildForm_component(SeleniumPage):
 
     ChildForm_SelectOption_loc = "[data-mark='%option']"  #下拉选项
 
-    ChildForm_label_loc = "[data-mark='%title']>label"
+    ChildForm_label_loc = "[data-mark='%title']>label"  #字段标题
+
+    ChildForm_userSelect_loc = "[data-mark='%title'] .row_%title_%row [data-mark='%user'] [data-mark='选择人员按钮']"  #子表人员选择
 
     def click_ChildForm_AddButton(self,fieldName,*args):
         '''点击添加按钮
@@ -94,7 +96,7 @@ class ChildForm_component(SeleniumPage):
 
     # 给子表的富文本组件字段添加数据
 
-    # 给子表的图片上传组件字段添加数据
+    #
     def sendkeys_To_ChildPicUpload(self,childformTitle,PicUploadTitle,row,picPath):
         '''给子表的图片上传组件输入值
         childformTitle :子表字段名
@@ -106,7 +108,18 @@ class ChildForm_component(SeleniumPage):
         self.sendkeysElemByCSS_Presence(self.ChildForm_Input_loc.replace('%title',childformTitle).replace('%row',reallyRow).replace('%text',PicUploadTitle),picPath)
 
 
-    # 给子表的人员选择组件字段添加数据
+    #
+    def sendkeys_To_ChildUser(self,childformTitle,UserTitle,row,):
+        '''给子表的人员选择组件字段添加数据
+        childformTitle :子表字段名
+        row：行数
+        PicUploadTitle：图片字段标题
+        picPath：图片路径
+        '''
+        reallyRow = str(row-1)
+        #点击人员选择
+        self.clickElemsByCSS_Presence(self.ChildForm_userSelect_loc.replace('%title',childformTitle).replace('%row',reallyRow).replace('%text',UserTitle))
+
 
     # 给子表的部门选择组件字段添加数据
 

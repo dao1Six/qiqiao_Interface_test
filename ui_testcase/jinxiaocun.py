@@ -91,6 +91,7 @@ class JinXiaoCun(unittest.TestCase):
         formPage = FormPage (self.driver)
         #点击子表添加按钮
         formPage.click_ChildForm_AddButton('子表单组件')
+        #
         formPage.sendkeys_To_ChildSelect('子表单组件',1,'单选',['java'])
         formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '下拉', ['足球'])
         # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '多选', ['苹果','华为'])
@@ -100,4 +101,28 @@ class JinXiaoCun(unittest.TestCase):
         formPage.sendkeys_To_ChildFormDateTime ('子表单组件', '日期时间', 1,'2018-11-22','19:20')
         time.sleep(30)
 
+    def test_4_addCustomer_record(self):
+        '''多表关联'''
+        loginpage = LoginPage (self.driver)
+        loginpage.user_login ('https://tqy.do1.net.cn/dev-runtime/', "liuyan@A", "qiqiao123")
+        portalpage = PortalPage (self.driver)
+        portalpage.click_header_menu ("应用")
+        applicationPage = ApplicationListPage (self.driver)
+        applicationPage.click_application ('杨李杰的分组', "1.01")
+        applicationDetailPage = ApplicationDetailsPage (self.driver)
+        applicationDetailPage.clickTreeItem('关联组件')
+        applicationDetailPage.clickTreeItem ('多表组件表单')
+        applicationDetailPage.clickViewButton('添加')
+        formPage = FormPage (self.driver)
+        # 点击多表关联组件的批量管理按钮
+        formPage.click_ChildForm_AddButton ('子表单组件')
+        #
+        formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '单选', ['java'])
+        formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '下拉', ['足球'])
+        # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '多选', ['苹果','华为'])
+        formPage.sendkeys_To_ChildPicUpload ('子表单组件', '图片上传', 1, self.project_path + '\\file_data\\pic.jpeg')
+        formPage.sendkeys_To_ChildFormDate ('子表单组件', '日期', 1, '2018-11-22')
+        formPage.sendkeys_To_ChildFormTime ('子表单组件', '时间', 1, '19:20')
+        formPage.sendkeys_To_ChildFormDateTime ('子表单组件', '日期时间', 1, '2018-11-22', '19:20')
+        time.sleep (30)
 
