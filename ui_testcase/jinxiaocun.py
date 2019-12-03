@@ -92,13 +92,14 @@ class JinXiaoCun(unittest.TestCase):
         #点击子表添加按钮
         formPage.click_ChildForm_AddButton('子表单组件')
         #
-        formPage.sendkeys_To_ChildSelect('子表单组件',1,'单选',['java'])
-        formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '下拉', ['足球'])
-        # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '多选', ['苹果','华为'])
-        formPage.sendkeys_To_ChildPicUpload('子表单组件', '图片上传',1, self.project_path+'\\file_data\\pic.jpeg')
-        formPage.sendkeys_To_ChildFormDate('子表单组件','日期',1,'2018-11-22')
-        formPage.sendkeys_To_ChildFormTime ('子表单组件', '时间', 1,'19:20')
-        formPage.sendkeys_To_ChildFormDateTime ('子表单组件', '日期时间', 1,'2018-11-22','19:20')
+        # formPage.sendkeys_To_ChildSelect('子表单组件',1,'单选',['java'])
+        # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '下拉', ['足球'])
+        # # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '多选', ['苹果','华为'])
+        # formPage.sendkeys_To_ChildPicUpload('子表单组件', '图片上传',1, self.project_path+'\\file_data\\pic.jpeg')
+        # formPage.sendkeys_To_ChildFormDate('子表单组件','日期',1,'2018-11-22')
+        # formPage.sendkeys_To_ChildFormTime ('子表单组件', '时间', 1,'19:20')
+        # formPage.sendkeys_To_ChildFormDateTime ('子表单组件', '日期时间', 1,'2018-11-22','19:20')
+        formPage.sendkeys_To_ChildFormUser('子表单组件', '人员选择', 1)
         time.sleep(30)
 
     def test_4_addCustomer_record(self):
@@ -115,14 +116,13 @@ class JinXiaoCun(unittest.TestCase):
         applicationDetailPage.clickViewButton('添加')
         formPage = FormPage (self.driver)
         # 点击多表关联组件的批量管理按钮
-        formPage.click_ChildForm_AddButton ('子表单组件')
-        #
-        formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '单选', ['java'])
-        formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '下拉', ['足球'])
-        # formPage.sendkeys_To_ChildSelect ('子表单组件', 1, '多选', ['苹果','华为'])
-        formPage.sendkeys_To_ChildPicUpload ('子表单组件', '图片上传', 1, self.project_path + '\\file_data\\pic.jpeg')
-        formPage.sendkeys_To_ChildFormDate ('子表单组件', '日期', 1, '2018-11-22')
-        formPage.sendkeys_To_ChildFormTime ('子表单组件', '时间', 1, '19:20')
-        formPage.sendkeys_To_ChildFormDateTime ('子表单组件', '日期时间', 1, '2018-11-22', '19:20')
+        formPage.click_MultiFormAssociation_HandleManagerButton('多表关联组件')
+        #勾选几条记录
+        formPage.tick_MultiFormManagementDialog_Record('多表关联组件',[1,2])
+        # formPage.click_MultiFormManagementDialog_ConfirmButton('多表关联组件')
+
+        #点击添加按钮
+        formPage.sendkeys_To_MultiFormText('多表关联组件',1,'中间表_单行文本','dadasdksadhashdjashjd')
+
         time.sleep (30)
 

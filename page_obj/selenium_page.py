@@ -281,6 +281,7 @@ class SeleniumPage(object):
         '''给一个可见元素写入值CSS'''
         elem = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.clear ()
         elem.send_keys(key)
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
@@ -288,6 +289,7 @@ class SeleniumPage(object):
         '''给可见的元素组里的某个元素写入值CSS'''
         elems = WebDriverWait(self.driver, timeout).until(EC.visibility_of_any_elements_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+        elems[num].clear ()
         elems[num].send_keys(key)
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
@@ -295,6 +297,7 @@ class SeleniumPage(object):
         '''给存在dom里的元素组里的某个元素写入值CSS'''
         elem = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
+        elem.clear ()
         elem.send_keys(key)
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
@@ -302,6 +305,7 @@ class SeleniumPage(object):
         '''给存在dom里的元素组里的某个元素写入值CSS'''
         elems = WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, locator)))
         self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+        elems[num].clear ()
         elems[num].send_keys(key)
 
 ##################
