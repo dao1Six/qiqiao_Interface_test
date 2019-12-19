@@ -211,6 +211,21 @@ class SeleniumPage(object):
         except TimeoutException:
             print('元素一直可见')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ####点击元素方法
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def clickElemByXpath_Visibility(self, locator, timeout=2):
@@ -299,6 +314,13 @@ class SeleniumPage(object):
         self.driver.execute_script ("arguments[0].scrollIntoView();", elem)
         elem.clear ()
         elem.send_keys(key)
+
+
+    def gundong(self, locator,key,num=0,timeout=2):
+        elems = WebDriverWait (self.driver, timeout).until (
+            EC.presence_of_all_elements_located ((By.CSS_SELECTOR, locator)))
+        self.driver.execute_script ("arguments[0].scrollIntoView();", elems[num])
+
 
     @retry(stop_max_attempt_number=5,wait_fixed = 2000)
     def sendkeysElemsByCSS_Presence(self, locator,key,num=0,timeout=2):
