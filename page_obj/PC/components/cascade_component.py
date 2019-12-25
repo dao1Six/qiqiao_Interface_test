@@ -14,8 +14,8 @@ class Cascade(SeleniumPage):
         fieldName：字段标题
         optionsList：级联选项  list类型
         '''
-        self.clickElemByXpath_Visibility(self.Cascade_selectionBox_loc.replace('%s', fieldName))
+        self.clickElemByXpath_Presence(self.Cascade_selectionBox_loc.replace('%s', fieldName))
         for i in optionsList:
-            self.clickElemByXpath_Visibility(self.Cascade_selecOption_loc.replace('%s', i))
+            self.clickElemByXpath_Presence(self.Cascade_selecOption_loc.replace('%s', i))
 
     #给级联组件输入值

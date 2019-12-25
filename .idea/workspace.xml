@@ -2,28 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfd92873-2991-4e1d-a019-71a4f07f80c3" name="Default" comment="补充UI自动化">
-      <change afterPath="$PROJECT_DIR$/page_obj/PC/components/dept_component.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_testcase/jichengAddressBook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_testcase/jichengForm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/components/address_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/address_component.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/data_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/data_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/datatime_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/datatime_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/number_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/number_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/childForm_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/childForm_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/date_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/date_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/datetime_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/datetime_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/dept_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/dept_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/foreignSelection_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/foreignSelection_component.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/components/selection_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/selection_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/text_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/text_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/textarea_components.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/textarea_components.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/components/time_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/time_component.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/PC/components/user_component.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/components/user_component.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/form_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/form_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/PC/portal_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/PC/portal_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_testcase/test_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui_testcase/test_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_obj/selenium_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/selenium_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,9 +35,12 @@
     <SUITE FILE_PATH="coverage/Interface$Unittests_for_test_website_LoginTest_test_message_website_login.coverage" NAME="Unittests for test_website.LoginTest.test_message_website_login Coverage Results" MODIFIED="1520909105090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_creat_form_models.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_creat_form_models Coverage Results" MODIFIED="1571725059688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_importApplication.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_importApplication Coverage Results" MODIFIED="1571392176965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_in_test_text_py.coverage" NAME="Unittests in test_text.py Coverage Results" MODIFIED="1573631518671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui_testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_in_jichengAddressBook_py.coverage" NAME="Unittests in jichengAddressBook.py Coverage Results" MODIFIED="1577267615490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_appstore.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_appstore Coverage Results" MODIFIED="1571292560091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/Interface$Unittests_in_test_website_py.coverage" NAME="Unittests in test_website.py Coverage Results" MODIFIED="1520913064660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_locales_en_US.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_locales_en_US Coverage Results" MODIFIED="1571293538197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_jinxiaocun_JinXiaoCun_test_3_addCustomer_record.coverage" NAME="Unittests for jinxiaocun.JinXiaoCun.test_3_addCustomer_record Coverage Results" MODIFIED="1577090409140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui_testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_importApplication.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_importApplication Coverage Results" MODIFIED="1571636841338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_create_application.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_create_application Coverage Results" MODIFIED="1571711657238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_console_ConsoleTestSuit_test_creat_pc_menus.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_creat_pc_menus Coverage Results" MODIFIED="1571971218873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
@@ -51,110 +53,54 @@
     <SUITE FILE_PATH="coverage/interface_test$runAll.coverage" NAME="runAll Coverage Results" MODIFIED="1571112064931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_console_ConsoleTestSuit_test_process_models.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_process_models Coverage Results" MODIFIED="1571899326999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_form_models.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_form_models Coverage Results" MODIFIED="1571723968569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_jinxiaocun_JinXiaoCun_test_4_addCustomer_record.coverage" NAME="Unittests for jinxiaocun.JinXiaoCun.test_4_addCustomer_record Coverage Results" MODIFIED="1576722553601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui_testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_in_jichengForm_py.coverage" NAME="Unittests in jichengForm.py Coverage Results" MODIFIED="1577268060605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
     <SUITE FILE_PATH="coverage/Interface$Unittests_for_test_website_LoginTest_test_experience_website_login.coverage" NAME="Unittests for test_website.LoginTest.test_experience_website_login Coverage Results" MODIFIED="1520909225427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/Interface$function.coverage" NAME="function Coverage Results" MODIFIED="1520910679756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pubilc" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_jinxiaocun_JinXiaoCun_test_2_addSupplier_record.coverage" NAME="Unittests for jinxiaocun.JinXiaoCun.test_2_addSupplier_record Coverage Results" MODIFIED="1574323783674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui_testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_jichengzhongxin_ConsoleTestSuit.coverage" NAME="Unittests for test_jichengzhongxin.ConsoleTestSuit Coverage Results" MODIFIED="1577246500572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_jinxiaocun_JinXiaoCun_test_1_addPro_record.coverage" NAME="Unittests for jinxiaocun.JinXiaoCun.test_1_addPro_record Coverage Results" MODIFIED="1574300961056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui_testcase" />
     <SUITE FILE_PATH="coverage/Interface$Unittests_for_test_website_LoginTest_test_official_website_login.coverage" NAME="Unittests for test_website.LoginTest.test_official_website_login Coverage Results" MODIFIED="1520912314343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_jichengzhongxin_jichengTestSuit.coverage" NAME="Unittests for test_jichengzhongxin.jichengTestSuit Coverage Results" MODIFIED="1577263583279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_locales_zh_TW.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_locales_zh_TW Coverage Results" MODIFIED="1571293667373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_jichengzhongxin_jichengTestSuit_test_device.coverage" NAME="Unittests for test_jichengzhongxin.jichengTestSuit.test_device Coverage Results" MODIFIED="1577254168476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_applications_release.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_applications_release Coverage Results" MODIFIED="1571649564339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_query_application_01.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_query_application_01 Coverage Results" MODIFIED="1571291244615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_Console_test_query_application_01.coverage" NAME="Unittests for test_console.Console.test_query_application_01 Coverage Results" MODIFIED="1571283234725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_locales_zh_TW.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_locales_zh_TW Coverage Results" MODIFIED="1571628363813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_create_groups.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_create_groups Coverage Results" MODIFIED="1571640041113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_jichengzhongxin_ConsoleTestSuit_test_device.coverage" NAME="Unittests for test_jichengzhongxin.ConsoleTestSuit.test_device Coverage Results" MODIFIED="1577246495526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_ Coverage Results" MODIFIED="1571293188681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test2$Unittests_for_test_console_ConsoleTestSuit_test_applications_groups.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_applications_groups Coverage Results" MODIFIED="1571643297266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_test_console_ConsoleTestSuit_test_switch_form.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_switch_form Coverage Results" MODIFIED="1571897886017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/qiqiao_Interface_test$Unittests_for_jichengAddressBook_jichengAddressBookTestSuit.coverage" NAME="Unittests for jichengAddressBook.jichengAddressBookTestSuit Coverage Results" MODIFIED="1577266562246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface_testcase" />
     <SUITE FILE_PATH="coverage/interface_test$Unittests_for_test_console_ConsoleTestSuit_test_loginQiqiao.coverage" NAME="Unittests for test_console.ConsoleTestSuit.test_loginQiqiao Coverage Results" MODIFIED="1571294109064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_component.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/user_component.py">
+      <file leaf-file-name="multiFormAssociation_component.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/multiFormAssociation_component.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="53" lean-forward="true" selection-end-line="65" />
-              <folding>
-                <element signature="e#6#17#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2203">
+              <caret line="129" column="29" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_text.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ui_testcase/test_text.py">
+      <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/login_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding>
-                <element signature="e#13#22#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="450">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="applicationDetails_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py">
+      <file leaf-file-name="selenium_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="118" lean-forward="true" selection-start-line="16" selection-start-column="118" selection-end-line="16" selection-end-column="118" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myunit.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui_testcase/myunit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dept_component.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/dept_component.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
-              <folding>
-                <element signature="e#6#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="address_component.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/address_component.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/PC/form_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-              <folding>
-                <element signature="e#6#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="driver.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubilc/driver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="658">
+              <caret line="263" column="55" lean-forward="true" selection-start-line="263" selection-start-column="55" selection-end-line="263" selection-end-column="55" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -162,13 +108,76 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="test_console.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_testcase/test_console.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1506">
+              <caret line="329" column="135" selection-start-line="329" selection-start-column="131" selection-end-line="329" selection-end-column="135" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jichengAddressBook.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_testcase/jichengAddressBook.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="195" column="56" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
+              <folding>
+                <element signature="e#15#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jichengForm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface_testcase/jichengForm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="37" column="99" selection-start-line="37" selection-start-column="99" selection-end-line="37" selection-end-column="99" />
+              <folding>
+                <element signature="e#30#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runAll.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runAll.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubilc/function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="325">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reportRunner.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reportRunner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="childForm_component.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_obj/PC/components/childForm_component.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#4#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,41 +194,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>OKR</find>
-      <find>click</find>
-      <find>from page_obj.PC.selenium_page import Page</find>
-      <find>隐藏</find>
-      <find>js</find>
-      <find>ElementClickInterceptedException</find>
-      <find>find_elemByCSS</find>
-      <find>日期</find>
-      <find>false</find>
-      <find>数字</find>
-      <find>地址</find>
-      <find>%s</find>
-      <find>@ddt</find>
-      <find>&quot;div[title='&quot;+fieldName+&quot;'] input[type='text']&quot;</find>
-      <find>&quot;//div[@title='&quot;+fieldName+&quot;']//span[text()='+选择人员']&quot;</find>
-      <find>&quot;//input[@placeholder='搜索部门']&quot;</find>
-      <find>dept_search_loc</find>
-      <find>header_menu_title_loc</find>
-      <find>submit_button_loc</find>
-      <find>application_card_loc</find>
-      <find>enter_application</find>
-      <find>keys</find>
+      <find>textarea_input_loc</find>
+      <find>time_input_loc</find>
+      <find>time_label_loc</find>
+      <find>UserquerenButton</find>
+      <find>user_select_loc</find>
+      <find>user_search_loc</find>
+      <find>user_option_loc</find>
+      <find>wangEditor_input_loc</find>
+      <find>ApplicationMenuPage_application_card_loc</find>
+      <find>PortalPage_header_menu_title_loc</find>
+      <find>子表</find>
+      <find>https://tqy.do1.net.cn/dev-auth/jsp/loginweb.jsp</find>
+      <find>ApplicationDetailsPage_Tab_loc</find>
+      <find>num,</find>
+      <find>DataTime</find>
+      <find>Data</find>
+      <find>多表中间表</find>
+      <find>MultiForm_Input_loc</find>
+      <find>ChildForm</find>
+      <find>childform</find>
+      <find>图</find>
+      <find>arguments[0].scrollIntoView()</find>
+      <find>clickElemByXpath_Visibility</find>
+      <find>sendkeysElem</find>
+      <find>sendkeysElemByXpath_Visibility</find>
+      <find>clickElem</find>
+      <find>clickElemByCSS_Visibility</find>
+      <find>True</find>
+      <find>账</find>
+      <find>根据部门id获取用户集合(分页)</find>
     </findStrings>
     <replaceStrings>
-      <replace>图片</replace>
-      <replace>地址</replace>
-      <replace>级联</replace>
-      <replace>self</replace>
-      <replace>self.</replace>
+      <replace>FileUpload_input_loc</replace>
+      <replace>Number_input_loc</replace>
+      <replace>PicUpload_input_loc</replace>
+      <replace>Selection_selectionBox_loc</replace>
+      <replace>Selection_multiSelectOption_loc</replace>
+      <replace>Selection_monomialSelectOption_loc</replace>
+      <replace>Selection_Option_loc</replace>
+      <replace>Text_input_loc</replace>
+      <replace>Textarea_input_loc</replace>
+      <replace>Time_input_loc</replace>
+      <replace>Time_label_loc</replace>
+      <replace>User_querenButton_loc</replace>
+      <replace>User_selectBox_loc</replace>
+      <replace>User_search_loc</replace>
+      <replace>User_searchOption_loc</replace>
+      <replace>WangEditor_input_loc</replace>
+      <replace>ApplicationListPage_application_loc</replace>
+      <replace>PortalPage_headerMenu_loc</replace>
+      <replace>多表中间表</replace>
+      <replace>https://tqy.do1.net.cn/dev-runtime/</replace>
+      <replace>num=0,</replace>
+      <replace>DateTime</replace>
+      <replace>Date</replace>
+      <replace>多表批量管理页面的中间表</replace>
+      <replace>MultiFormManagementDialog__Input_loc</replace>
+      <replace>MultiForm</replace>
+      <replace>clickElemByXpath_Presence</replace>
+      <replace>sendkeysElemByXpath_Presence</replace>
       <replace />
-      <replace>PortalPage_header_menu_title_loc</replace>
-      <replace>FormPage_submit_button_loc</replace>
-      <replace>ApplicationMenuPage_application_card_loc</replace>
-      <replace>click_application_card</replace>
-      <replace>optionsList</replace>
+      <replace>clickElemByCSS_Presence</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -252,28 +288,39 @@
         <option value="$PROJECT_DIR$/page_obj/login_page.py" />
         <option value="$PROJECT_DIR$/interface_testcase/test_console.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/selenium_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/selenium_page.py" />
         <option value="$PROJECT_DIR$/ui_testcase/myunit.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/user_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/login_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/portal_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/form_page.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/time_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/address_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/data_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/datatime_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/dept_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/number_component.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/components/textarea_components.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/time_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/user_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/portal_page.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/components/text_component.py" />
         <option value="$PROJECT_DIR$/page_obj/PC/components/selection_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/number_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/datatime_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/data_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/cascade_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/address_component.py" />
-        <option value="$PROJECT_DIR$/page_obj/PC/components/dept_component.py" />
         <option value="$PROJECT_DIR$/ui_testcase/test_text.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/foreignSelection_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/childFormAssociation_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/applicationList_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/date_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/datetime_component.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/form_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/multiFormAssociation_component.py" />
+        <option value="$PROJECT_DIR$/ui_testcase/jinxiaocun.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/login_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/selenium_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/PC/components/childForm_component.py" />
+        <option value="$PROJECT_DIR$/interface_testcase/test_jichengzhongxin.py" />
+        <option value="$PROJECT_DIR$/interface_testcase/jichengAddressBook.py" />
+        <option value="$PROJECT_DIR$/interface_testcase/jichengForm.py" />
       </list>
     </option>
   </component>
@@ -287,10 +334,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="553" />
-    <option name="y" value="32" />
-    <option name="width" value="1282" />
-    <option name="height" value="834" />
+    <option name="x" value="381" />
+    <option name="y" value="41" />
+    <option name="width" value="1594" />
+    <option name="height" value="997" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -310,6 +357,29 @@
             <path>
               <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_testcase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="jichengAddressBook.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="jichengForm.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="interface_testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="test_console.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
               <item name="page_obj" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -321,13 +391,28 @@
             <path>
               <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
-              <item name="ui_testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="page_obj" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium_page.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="pubilc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="test_report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
               <item name="ui_testcase" type="462c0819:PsiDirectoryNode" />
-              <item name="test_text.py" type="8704e2dd:PyFileNode" />
+            </path>
+            <path>
+              <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiqiao_Interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qiqiao_Interface_test" type="b2602c69:ProjectViewProjectNode" />
@@ -345,20 +430,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../beatiful_report" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonwork\wujianlunTeam\qiqiao_Interface_test\page_obj\PC\components" />
+      <recent name="G:\python_workspace\qiqiao_Interface_test\file_data" />
+      <recent name="G:\python_workspace\qiqiao_Interface_test\pubilc" />
+      <recent name="D:\interface_test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\python_workspace\wujianlunTestTeam\qiqiao_Interface_test\file_data" />
       <recent name="G:\python_workspace\qiqiao_Interface_test\page_obj\PC" />
       <recent name="G:\python_workspace\qiqiao_Interface_test\testcase\interface" />
       <recent name="G:\python_workspace\qiqiao_Interface_test\page_obj" />
       <recent name="D:\interface_test\pubilc" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\python_workspace\qiqiao_Interface_test\file_data" />
-      <recent name="G:\python_workspace\qiqiao_Interface_test\pubilc" />
-      <recent name="D:\interface_test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -373,45 +459,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_text.py">
-    <configuration name="driver" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pubilc" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pubilc/driver.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test_console" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="E:\SoftwareInstall\python3.7\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_testcase" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interface_testcase/test_console.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in jichengForm.py">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -544,7 +592,7 @@
       <arguments />
       <envs />
     </configuration>
-    <configuration name="Unittests for interface_testcase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for interface_testcase.jichengAddressBook" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -555,10 +603,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;interface_testcase&quot;" />
+      <option name="_new_target" value="&quot;interface_testcase.jichengAddressBook&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for interface_testcase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for interface_testcase.jichengAddressBook" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -569,9 +617,22 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;interface_testcase&quot;" />
+      <option name="_new_target" value="&quot;interface_testcase.jichengAddressBook&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for jichengAddressBook.jichengAddressBookTestSuit" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;jichengAddressBook.jichengAddressBookTestSuit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for test_text.Text.test_01" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
@@ -587,7 +648,7 @@
       <option name="_new_target" value="&quot;test_text.Text.test_01&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests in test_console.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in jichengAddressBook.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -598,22 +659,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface_testcase/test_console.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface_testcase/jichengAddressBook.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="Unittests in test_text.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in jichengForm.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="E:\SoftwareInstall\python3.7\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ui_testcase" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface_testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_pattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/ui_testcase/test_text.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface_testcase/jichengForm.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -631,18 +691,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python.driver" />
-      <item itemvalue="Python.test_console" />
-      <item itemvalue="Python tests.Unittests for interface_testcase" />
-      <item itemvalue="Python tests.Unittests in test_console.py" />
-      <item itemvalue="Python tests.Unittests in test_text.py" />
+      <item itemvalue="Python tests.Unittests for interface_testcase.jichengAddressBook" />
+      <item itemvalue="Python tests.Unittests for interface_testcase.jichengAddressBook" />
+      <item itemvalue="Python tests.Unittests for jichengAddressBook.jichengAddressBookTestSuit" />
+      <item itemvalue="Python tests.Unittests in jichengForm.py" />
+      <item itemvalue="Python tests.Unittests in jichengAddressBook.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in test_text.py" />
-        <item itemvalue="Python tests.Unittests in test_console.py" />
-        <item itemvalue="Python.test_console" />
-        <item itemvalue="Python.driver" />
+        <item itemvalue="Python tests.Unittests in jichengForm.py" />
+        <item itemvalue="Python tests.Unittests in jichengAddressBook.py" />
+        <item itemvalue="Python tests.Unittests for jichengAddressBook.jichengAddressBookTestSuit" />
+        <item itemvalue="Python tests.Unittests for interface_testcase.jichengAddressBook" />
+        <item itemvalue="Python tests.Unittests for interface_testcase.jichengAddressBook" />
       </list>
     </recent_temporary>
   </component>
@@ -818,39 +879,144 @@
       <option name="project" value="LOCAL" />
       <updated>1573366381788</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="补充UI自动化">
+      <created>1573461894737</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1573461894737</updated>
+    </task>
+    <task id="LOCAL-00025" summary="补充UI自动化">
+      <created>1573462164693</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1573462164693</updated>
+    </task>
+    <task id="LOCAL-00026" summary="补充UI自动化">
+      <created>1573471684932</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1573471684932</updated>
+    </task>
+    <task id="LOCAL-00027" summary="补充UI自动化">
+      <created>1573478077369</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1573478077369</updated>
+    </task>
+    <task id="LOCAL-00028" summary="page对象里的方法都加上*args 参数">
+      <created>1573528516599</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1573528516599</updated>
+    </task>
+    <task id="LOCAL-00029" summary="修改页面元素变量名">
+      <created>1573539165837</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1573539165837</updated>
+    </task>
+    <task id="LOCAL-00030" summary="补充UI自动化">
+      <created>1573540065592</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1573540065592</updated>
+    </task>
+    <task id="LOCAL-00031" summary="补充UI自动化">
+      <created>1573900352261</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1573900352262</updated>
+    </task>
+    <task id="LOCAL-00032" summary="补充UI自动化">
+      <created>1574062383920</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1574062383920</updated>
+    </task>
+    <task id="LOCAL-00033" summary="补充UI自动化">
+      <created>1574071312344</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1574071312344</updated>
+    </task>
+    <task id="LOCAL-00034" summary="补充UI自动化">
+      <created>1574230168928</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1574230168928</updated>
+    </task>
+    <task id="LOCAL-00035" summary="补充UI自动化">
+      <created>1574337597669</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1574337597669</updated>
+    </task>
+    <task id="LOCAL-00036" summary="补充UI自动化">
+      <created>1575023841948</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1575023841949</updated>
+    </task>
+    <task id="LOCAL-00037" summary="补充UI自动化">
+      <created>1575369291092</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1575369291092</updated>
+    </task>
+    <task id="LOCAL-00038" summary="补充UI自动化">
+      <created>1576758064584</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1576758064584</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_text_py - 2019.11.09 at 10h 30m 58s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_for_jichengAddressBook_jichengAddressBookTestSuit - 2019.12.25 at 17h 33m 20s.xml">
+      <configuration name="Unittests for jichengAddressBook.jichengAddressBookTestSuit" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.09 at 15h 23m 12s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_for_jichengAddressBook_jichengAddressBookTestSuit - 2019.12.25 at 17h 33m 35s.xml">
+      <configuration name="Unittests for jichengAddressBook.jichengAddressBookTestSuit" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_text_Text_test_01 - 2019.11.10 at 16h 52m 27s.xml">
-      <configuration name="Unittests for test_text.Text.test_01" configurationId="tests" />
+    <history-entry file="Unittests_for_jichengAddressBook_jichengAddressBookTestSuit - 2019.12.25 at 17h 36m 04s.xml">
+      <configuration name="Unittests for jichengAddressBook.jichengAddressBookTestSuit" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_text_Text_test_01 - 2019.11.10 at 16h 53m 42s.xml">
-      <configuration name="Unittests for test_text.Text.test_01" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengForm_py - 2019.12.25 at 17h 46m 44s.xml">
+      <configuration name="Unittests in jichengForm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_text_Text_test_01 - 2019.11.10 at 16h 54m 55s.xml">
-      <configuration name="Unittests for test_text.Text.test_01" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengForm_py - 2019.12.25 at 17h 47m 11s.xml">
+      <configuration name="Unittests in jichengForm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 16h 58m 57s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengForm_py - 2019.12.25 at 17h 47m 33s.xml">
+      <configuration name="Unittests in jichengForm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 01m 59s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengForm_py - 2019.12.25 at 17h 47m 52s.xml">
+      <configuration name="Unittests in jichengForm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 04m 29s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengAddressBook_py - 2019.12.25 at 17h 49m 22s.xml">
+      <configuration name="Unittests in jichengAddressBook.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 13m 45s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengAddressBook_py - 2019.12.25 at 17h 53m 38s.xml">
+      <configuration name="Unittests in jichengAddressBook.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_text_py - 2019.11.10 at 17h 15m 31s.xml">
-      <configuration name="Unittests in test_text.py" configurationId="tests" />
+    <history-entry file="Unittests_in_jichengForm_py - 2019.12.25 at 18h 01m 01s.xml">
+      <configuration name="Unittests in jichengForm.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView" selected-index="2">
@@ -868,25 +1034,25 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.47128928" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49967042" weight="0.3177874" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.43167028" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.4767064" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49967042" weight="0.11522049" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.31" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286334" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32921812" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.20476706" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40130153" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Data View" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
     </layout>
@@ -929,6 +1095,8 @@
     <MESSAGE value="删除新增文件" />
     <MESSAGE value="新增文件" />
     <MESSAGE value="10.24开发平台增加用例" />
+    <MESSAGE value="page对象里的方法都加上*args 参数" />
+    <MESSAGE value="修改页面元素变量名" />
     <MESSAGE value="补充UI自动化" />
     <option name="LAST_COMMIT_MESSAGE" value="补充UI自动化" />
   </component>
@@ -937,10 +1105,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py</url>
-          <line>16</line>
+          <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ui_testcase/jinxiaocun.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
       </breakpoints>
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -998,95 +1172,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>self.find_elemByXPATH(&quot;div.precessCenter_card1 &gt; div.el-collapse-item__wrap a[title='&quot;+name+&quot;']&quot;)</expression-string>
+        <expression-string>self.driver.execute_script (&quot;arguments[0].scrollIntoView();&quot;, WebDriverWait (self.driver, timeout).until (EC.presence_of_all_elements_located ((By.CSS_SELECTOR, &quot;[data-mark='子表单组件'] .row_子表单组件_0 [data-mark='图片上传']&quot;)))[0])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.find_elem_is_clickableByXPATH(&quot;div.precessCenter_card1 &gt; div.el-collapse-item__wrap a[title='&quot;+name+&quot;']&quot;)</expression-string>
+        <expression-string>self.driver.execute_script (&quot;arguments[0].scrollIntoView();&quot;, elems[num])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>&quot;div.precessCenter_card1 &gt; div.el-collapse-item__wrap a[title='&quot;+name+&quot;']&quot;</expression-string>
+        <expression-string>self.driver.execute_script (&quot;arguments[0].scrollIntoView();&quot;, WebDriverWait (self.driver, timeout).until (EC.presence_of_all_elements_located ((By.CSS_SELECTOR, &quot;[data-mark='子表单组件'] [title='图片上传']&quot;)))[0])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>&quot;div.precessCenter_card1 &gt; div.el-collapse-item__wrap a[title=&quot;+name+&quot;]&quot;</expression-string>
+        <expression-string>self.driver.execute_script (&quot;arguments[0].scrollIntoView();&quot;, elems[0])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.find_elem_is_clickableByXPATH(&quot;div.precessCenter_card1 &gt; div.el-collapse-item__wrap a[title=&quot;+name+&quot;]&quot;)</expression-string>
+        <expression-string>self.gundong(self.ChildForm_Input_loc.replace('%title',childformTitle).replace('%row',reallyRow).replace('%text',PicUploadTitle),num=1)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.find_elemByXPATH(&quot;//div[@role='alert' and @class='el-message el-message--success']&quot;)</expression-string>
+        <expression-string>self.find</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.find_elem_is_clickableByXPATH(&quot;//a[@class='header_menu_title' and text()='&quot;+menu+&quot;']&quot;)</expression-string>
+        <expression-string>type(elem)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>&quot;//a[@class='header_menu_title' and text()='&quot; +menu+ &quot;']&quot;</expression-string>
+        <expression-string>len(elem)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>&quot;//a[@class='header_menu_title' and text()=&quot; +menu+ &quot;]&quot;</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>&quot;//a[@class='header_menu_title' and text()=&quot; +menu+ &quot;]&quot;.</expression-string>
+        <expression-string>elem</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3175">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/SoftwareInstall/python3.7/Lib/unittest/case.py" />
-    <entry file="file://F:/SoftwareInstall/python3.7/Lib/unittest/suite.py" />
-    <entry file="file://$PROJECT_DIR$/test_report/test_report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/SoftwareInstall/python3.7/Lib/site-packages/selenium/webdriver/common/service.py" />
-    <entry file="file://E:/SoftwareInstall/python3.7/Lib/site-packages/selenium/webdriver/common/service.py" />
-    <entry file="file://$PROJECT_DIR$/util/requestController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/SoftwareInstall/python3.7/Lib/site-packages/selenium/webdriver/chrome/options.py" />
-    <entry file="file://$PROJECT_DIR$/pubilc/file1.txt" />
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/unittest/suite.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/diff_tools.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1098,29 +1230,8 @@
     <entry file="file://$PROJECT_DIR$/page_obj/PC/selenium_page.py" />
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/site-packages/selenium/webdriver/remote/webdriver.py" />
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/site-packages/selenium/webdriver/remote/errorhandler.py" />
-    <entry file="file://$PROJECT_DIR$/interface_testcase/test_console.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2650">
-          <caret line="121" column="42" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/556007204/builtins.py" />
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/smtplib.py" />
-    <entry file="file://$PROJECT_DIR$/runAll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportRunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/http/client.py" />
     <entry file="file://E:/SoftwareInstall/python3.7/Lib/unittest/case.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
@@ -1151,197 +1262,289 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
+    <entry file="file://$PROJECT_DIR$/pubilc/driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3175">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/portal_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationMenu_page.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/number_component.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/textarea_components.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="450">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_obj/PC/components/time_component.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/textarea_components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/text_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/selection_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/number_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/datatime_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/data_component.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/user_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="53" lean-forward="true" selection-end-line="65" />
-          <folding>
-            <element signature="e#6#17#0" expanded="true" />
-          </folding>
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_obj/PC/components/dept_component.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/wangEditor_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/cascade_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="6" column="101" lean-forward="true" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/file_Upload_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/foreignSelection_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/childFormAssociation_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui_testcase/myunit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="25" lean-forward="true" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/address_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/portal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/pic_Upload_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/text_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/datetime_component.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/contextlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/form_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/date_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui_testcase/test_text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="53" column="62" selection-start-line="53" selection-start-column="57" selection-end-line="53" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/selection_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/site-packages/pip/_vendor/retrying.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/user_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
           <folding>
             <element signature="e#6#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/address_component.py">
+    <entry file="file://$PROJECT_DIR$/ui_testcase/jinxiaocun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/PC/form_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="240">
+          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
           <folding>
-            <element signature="e#6#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubilc/driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubilc/function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui_testcase/myunit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationDetails_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="118" lean-forward="true" selection-start-line="16" selection-start-column="118" selection-end-line="16" selection-end-column="118" />
+        <state relative-caret-position="925">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui_testcase/test_text.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/applicationList_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="525">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/multiFormAssociation_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2203">
+          <caret line="129" column="29" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/PC/components/childForm_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
           <folding>
-            <element signature="e#13#22#0" expanded="true" />
+            <element signature="e#4#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/selenium_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="263" column="55" lean-forward="true" selection-start-line="263" selection-start-column="55" selection-end-line="263" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Software/python/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubilc/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportRunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_testcase/test_console.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1506">
+          <caret line="329" column="135" selection-start-line="329" selection-start-column="131" selection-end-line="329" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_testcase/jichengAddressBook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="195" column="56" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_testcase/jichengForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="37" column="99" selection-start-line="37" selection-start-column="99" selection-end-line="37" selection-end-column="99" />
+          <folding>
+            <element signature="e#30#45#0" expanded="true" />
           </folding>
         </state>
       </provider>

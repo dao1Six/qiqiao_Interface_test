@@ -27,7 +27,7 @@ class ApplicationDetailsPage(SeleniumPage):
         '''点击列表头按钮
         buttonName：按钮名称
         '''
-        self.clickElemByCSS_Visibility(self.ApplicationDetailsPage_viewbutton_loc.replace('%btnName',buttonName))
+        self.clickElemByCSS_Presence(self.ApplicationDetailsPage_viewbutton_loc.replace('%btnName',buttonName))
 
     def get_viewList_CellValue(self,*args):
         '''获取列表某个单元格的值'''

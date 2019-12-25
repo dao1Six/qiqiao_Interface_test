@@ -15,8 +15,8 @@ class Address(SeleniumPage):
         addkeys：省市区地址  list类型
         detilkey：详情地址信息
         '''
-        self.clickElemByXpath_Visibility(self.Address_selectionBox_loc.replace('%s', fieldName))
+        self.clickElemByXpath_Presence(self.Address_selectionBox_loc.replace('%s', fieldName))
         for i in addkeys:
-            self.clickElemByXpath_Visibility(self.Address_selecOption_loc.replace('%s', i))
-        self.sendkeysElemByXpath_Visibility(self.Address_detilInput_loc.replace('%s', fieldName),detilkey)
+            self.clickElemByXpath_Presence(self.Address_selecOption_loc.replace('%s', i))
+        self.sendkeysElemByXpath_Presence(self.Address_detilInput_loc.replace('%s', fieldName),detilkey)
 

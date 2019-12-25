@@ -23,10 +23,10 @@ class User(SeleniumPage):
         userName：人员名称
         '''
         #点击选择框
-        self.clickElemByXpath_Visibility(self.User_selectBox_loc.replace('%s',fieldName))
-        self.sendkeysElemByXpath_Visibility(self.User_search_loc,userName)
-        self.clickElemByXpath_Visibility(self.User_searchOption_loc.replace('%s',userName))
-        self.clickElemByXpath_Visibility(self.User_querenButton_loc)
+        self.clickElemByXpath_Presence(self.User_selectBox_loc.replace('%s',fieldName))
+        self.sendkeysElemByXpath_Presence(self.User_search_loc,userName)
+        self.clickElemByXpath_Presence(self.User_searchOption_loc.replace('%s',userName))
+        self.clickElemByXpath_Presence(self.User_querenButton_loc)
 
 
 
@@ -36,12 +36,12 @@ class User(SeleniumPage):
         userNameList：人员名称集合  list类型
         '''
         #点击选择框
-        self.clickElemByXpath_Visibility(self.User_selectBox_loc.replace('%s',fieldName))
+        self.clickElemByXpath_Presence(self.User_selectBox_loc.replace('%s',fieldName))
         for name in userNameList:
-            self.clickElemByXpath_Visibility(self.User_search_loc)
-            self.sendkeysElemByXpath_Visibility(self.User_search_loc,name)
-            self.clickElemByXpath_Visibility(self.User_searchOption_loc.replace('%s',name))
-        self.clickElemByXpath_Visibility(self.User_querenButton_loc)
+            self.clickElemByXpath_Presence(self.User_search_loc)
+            self.sendkeysElemByXpath_Presence(self.User_search_loc,name)
+            self.clickElemByXpath_Presence(self.User_searchOption_loc.replace('%s',name))
+        self.clickElemByXpath_Presence(self.User_querenButton_loc)
 
 
 

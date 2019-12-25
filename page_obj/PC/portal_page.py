@@ -16,7 +16,7 @@ class PortalPage(SeleniumPage):
         '''点击工作台头部菜单
         menu：菜单名
         '''
-        self.clickElemByXpath_Visibility(self.PortalPage_headerMenu_loc.replace('%menu',menu))
+        self.clickElemByXpath_Presence(self.PortalPage_headerMenu_loc.replace('%menu',menu))
 
 
 

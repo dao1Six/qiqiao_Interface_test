@@ -18,8 +18,8 @@ class LoginPage(SeleniumPage):
         password：密码
         '''
         self.open(login_url)
-        self.clickElemByXpath_Visibility(self.denglu)
-        self.sendkeysElemByXpath_Visibility(self.zhanghao,username)
-        self.sendkeysElemByXpath_Visibility(self.mima,password)
-        self.clickElemByXpath_Visibility(self.anniu)
+        self.clickElemByXpath_Presence(self.denglu)
+        self.sendkeysElemByXpath_Presence(self.zhanghao,username)
+        self.sendkeysElemByXpath_Presence(self.mima,password)
+        self.clickElemByXpath_Presence(self.anniu)
 

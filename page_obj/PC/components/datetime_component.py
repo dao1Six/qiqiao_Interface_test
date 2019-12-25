@@ -19,7 +19,7 @@ class DateTime(SeleniumPage):
         timeElem = self.find_elemsByCSS(locator)[1]
         dataElem.send_keys(datekey)
         timeElem.send_keys(timekey)
-        self.clickElemByCSS_Visibility(self.DateTime_label_loc.replace('%s',fieldName).replace('%title',fieldName))
+        self.clickElemByCSS_Presence(self.DateTime_label_loc.replace('%s',fieldName).replace('%title',fieldName))
 
 
     #获取日期组件的值

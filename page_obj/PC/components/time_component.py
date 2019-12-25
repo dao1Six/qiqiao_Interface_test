@@ -16,6 +16,6 @@ class Time(SeleniumPage):
         '''
         locator = self.Time_input_loc.replace('%s',fieldName)
         self.sendkeysElemByCSS_Visibility(locator, key)
-        self.clickElemByCSS_Visibility(self.Time_label_loc.replace('%s',fieldName))
+        self.clickElemByCSS_Presence(self.Time_label_loc.replace('%s',fieldName))
 
     #获取时间组件的值

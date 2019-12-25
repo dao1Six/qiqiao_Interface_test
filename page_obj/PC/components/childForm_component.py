@@ -10,6 +10,9 @@ class ChildForm_component(SeleniumPage):
 
     ChildForm_Input_loc = "[data-mark='%title'] .row_%title_%row [data-mark='%text'] input"  #子表输入框
 
+    ChildForm_div_loc = "[data-mark='%title'] .row_%title_%row [data-mark='%text']"  # 子表输入框div
+
+
     ChildForm_SelectOption_loc = "[data-mark='%option']"  #下拉选项
 
     ChildForm_label_loc = "[data-mark='%title']>label"  #字段标题
@@ -17,13 +20,17 @@ class ChildForm_component(SeleniumPage):
     ChildForm_userSelect_loc = "[data-mark=%title] .row_%title_%row [data-mark=%user] [data-mark='选择人员按钮']"  #子表人员选择
 
 
-    #
+
+    def scroll_To_ChildForm_Div(self):
+        self.scrollIntoView(self.ChildForm_div_loc)
+
 
     def click_ChildForm_AddButton(self,fieldName,*args):
         '''点击添加按钮
         fieldName：字段标题
         '''
-        self.clickElemByCSS_Visibility (self.ChildForm_AddButton_loc.replace ('%title', fieldName))
+        self.clickElemByCSS_Presence (self.ChildForm_AddButton_loc.replace ('%title', fieldName))
+
 
 
     def delete_ChildForm_Record(self):
@@ -111,7 +118,6 @@ class ChildForm_component(SeleniumPage):
         picPath：图片路径
         '''
         reallyRow = str(row-1)
-        self.gundong(self.ChildForm_Input_loc.replace('%title',childformTitle).replace('%row',reallyRow).replace('%text',PicUploadTitle),num=1)
         self.sendkeysElemsByCSS_Presence(self.ChildForm_Input_loc.replace('%title',childformTitle).replace('%row',reallyRow).replace('%text',PicUploadTitle),picPath)
 
 
@@ -127,10 +133,10 @@ class ChildForm_component(SeleniumPage):
         self.clickElemsByCSS_Presence(self.ChildForm_userSelect_loc.replace('%title',childformTitle).replace('%row',reallyRow).replace('%user',UserTitle))
 
         for name in userNameList:
-            self.clickElemByXpath_Visibility (self.User_search_loc)
-            self.sendkeysElemByXpath_Visibility (self.User_search_loc, name)
-            self.clickElemByXpath_Visibility (self.User_searchOption_loc.replace ('%s', name))
-        self.clickElemByXpath_Visibility (self.User_querenButton_loc)
+            self.clickElemByXpath_Presence (self.User_search_loc)
+            self.sendkeysElemByXpath_Presence (self.User_search_loc, name)
+            self.clickElemByXpath_Presence (self.User_searchOption_loc.replace ('%s', name))
+        self.clickElemByXpath_Presence (self.User_querenButton_loc)
 
 
     # 给子表的部门选择组件字段添加数据

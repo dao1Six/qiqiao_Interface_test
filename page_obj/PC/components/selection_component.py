@@ -21,9 +21,9 @@ class Selection(SeleniumPage):
         list：下拉选项 list类型
         '''
         loc = self.Selection_selectionBox_loc.replace('%title',fieldName)
-        self.clickElemByCSS_Visibility(loc)
+        self.clickElemByCSS_Presence(loc)
         for i in list:
-            self.clickElemByCSS_Visibility(self.Selection_multiSelectOption_loc.replace('%option',i))
+            self.clickElemByCSS_Presence(self.Selection_multiSelectOption_loc.replace('%option',i))
 
     #
     def sendkeysToMonomialSelect(self,fieldName,option,*args):
@@ -32,8 +32,8 @@ class Selection(SeleniumPage):
         option：下拉选项
         '''
         loc = self.Selection_selectionBox_loc.replace('%title',fieldName)
-        self.clickElemByCSS_Visibility (loc)
-        self.clickElemByXpath_Visibility(self.Selection_monomialSelectOption_loc.replace('%s',option))
+        self.clickElemByCSS_Presence (loc)
+        self.clickElemByXpath_Presence(self.Selection_monomialSelectOption_loc.replace('%s',option))
 
     #
     def sendkeysToRadioSelect(self,fieldName,option,*args):
@@ -41,7 +41,7 @@ class Selection(SeleniumPage):
         fieldName：字段标题
         option：单项选项
         '''
-        self.clickElemByXpath_Visibility (self.Selection_Option_loc.replace('%s',fieldName).replace('%option',option))
+        self.clickElemByXpath_Presence (self.Selection_Option_loc.replace('%s',fieldName).replace('%option',option))
 
 
     #
@@ -51,4 +51,4 @@ class Selection(SeleniumPage):
         list：多项选项 list类型
         '''
         for i in list:
-            self.clickElemByXpath_Visibility(self.Selection_Option_loc.replace('%s',fieldName).replace('%option',i))
+            self.clickElemByXpath_Presence(self.Selection_Option_loc.replace('%s',fieldName).replace('%option',i))
